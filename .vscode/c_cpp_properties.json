@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "name": "windows-gcc-x86",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${default}"
+      ],
+      "defines": [
+        "${default}"
+      ],
+      "macFrameworkPath": [
+        "${default}"
+      ],
+      "forcedInclude": [
+        "${default}",
+        "E:/courses/ES/Me/First/max.c"
+      ],
+      "compileCommands": "${default}",
+      "browse": {
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": "${default}",
+        "path": [
+          "${default}"
+        ]
+      },
+      "intelliSenseMode": "windows-gcc-x86",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+      "compilerArgs": []
+    }
+  ],
+  "version": 4
+}
