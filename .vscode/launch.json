@@ -30,7 +30,7 @@
       "stopAtEntry": false,
       "cwd": "e:\\courses\\ES\\Me",
       "environment": [],
-      "program": "e:\\courses\\ES\\Me\\build\\Debug\\outDebug",
+      "program": "e:\\courses\\ES\\Me\\build\\Release\\outRelease",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",

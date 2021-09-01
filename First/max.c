@@ -1,4 +1,5 @@
-int max(int x, int y)
+#include <stdio.h>
+void max(int x, int y)
 {
     int z;
     if (x > y)
@@ -9,5 +10,5 @@ int max(int x, int y)
     {
         z = y;
     }
-    return z;
+    printf("Max = %i", z);
 }

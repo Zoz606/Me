@@ -1,1 +1,2 @@
-int max(int, int);
+#pragma once
+printf("ok\n");
