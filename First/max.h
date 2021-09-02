@@ -1,2 +1,1 @@
-#pragma once
-printf("ok\n");
+void max(int, int);

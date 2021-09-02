@@ -4,7 +4,7 @@
       "name": "windows-gcc-x86",
       "includePath": [
         "${workspaceFolder}/**",
-        "${workspaceFolder}/First/headers",
+        "${workspaceFolder}/First",
         "${default}"
       ],
       "defines": [
@@ -31,6 +31,31 @@
       "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
       "compilerArgs": [],
       "configurationProvider": "ms-vscode.cmake-tools"
+    },
+    {
+      "name": "AVR",
+      "intelliSenseMode": "${default}",
+      "cStandard": "c11",
+      "cppStandard": "c++14",
+      "compilerPath": "",
+      "includePath": [],
+      "compilerArgs": [],
+      "configurationProvider": "go2sh.cmake-integration"
+    },
+    {
+      "name": "gcc",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ],
   "version": 4
