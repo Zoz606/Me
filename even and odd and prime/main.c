@@ -3,38 +3,16 @@
 
 int main()
 {
-    int x, i, z;
-    printf("enter a Number : ");
-    scanf("%i", &x);
-    if (x % 2 == 0)
+    signed int num[10] = {4, 3, 6, 5, 8, 9, 2, 7, 1, 10},
+               order[10],
+               i;
+
+    printf("The order of the array is: ");
+    for (i = 0; i < 10; i++)
     {
-        printf("This number is EVEN");
-    }
-    else
-    {
-        printf("Thia number is ODD");
-    }
-    if (x == 0 || x == 1)
-    {
-        printf("This number is not prime");
-    }
-    else
-    {
-        for (i = 2; i <= x; i++)
+        if (num[i] < num[i + 1])
         {
-            if (x % i == 0)
-            {
-                z = 1;
-                break;
-            }
-        }
-        if (z == 1)
-        {
-            printf(" and prime ");
-        }
-        else
-        {
-            printf(" and not prime");
+            order[i] =
         }
     }
     return 0;
