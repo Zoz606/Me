@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <string.h>
-#include "typedef keywords.h"
-
-int main()
+#include <stdlib.h>
+struct car
 {
-	SINT8 x = 255;
-	printf("%i", x);
-	return 0;
+	int x;
+	char y;
+} int main()
+{
+	struct car car;
+	car.x = 10;
+	car.y = 11;
+	printf("%d\n", car.x) return 0;
 }

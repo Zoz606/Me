@@ -4,13 +4,15 @@
 int main()
 {
 
-    int x, y, z;
+    int a, b, c, d;
     printf("Enter the first number : ");
-    scanf("%i", &x);
+    scanf("%i", &a);
     printf("Enter the second number : ");
-    scanf("%i", &y);
+    scanf("%i", &b);
     printf("Enter the first number : ");
-    scanf("%i", &z);
+    scanf("%i", &c);
+    printf("Enter the first number : ");
+    scanf("%i", &d);
 
     // Using if
     /*
@@ -52,3 +54,5 @@ int main()
 
     return 0;
 }
+
+
