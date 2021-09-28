@@ -70,6 +70,7 @@ void send_all_acceptable_packages(town *source, int source_office_index, town *t
 		}
 		else
 		{
+
 			oldPackages[m] = source->offices[source_office_index].packages[i];
 			++m;
 		}

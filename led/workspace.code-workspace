@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "..\\First"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"io.h": "c"
+		}
+	}
+}
