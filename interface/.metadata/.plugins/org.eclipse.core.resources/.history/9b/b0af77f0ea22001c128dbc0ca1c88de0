@@ -1,0 +1,18 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 1, 2021
+ *      Author: Zezo
+ */
+
+
+#include <avr/io.h>
+long long* x;
+
+int main (void)
+{
+	while(1)
+	{
+
+	}
+}

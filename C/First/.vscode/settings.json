@@ -1,9 +1,3 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled",
-    "AVR.source.compiler": "E:\\programs\\avr8-gnu-toolchain-3.6.2.1778-win32.any.x86\\avr8-gnu-toolchain-win32_x86\\bin\\avr-c++.exe",
-    "AVR.programmer.tool": "E:\\programs\\avrdude-v6.3.1.1-windows\\avrdude.exe",
-    "AVR.programmer.definitions": "E:\\programs\\avrdude-v6.3.1.1-windows\\avrdude.conf",
-    "AVR.source.libraries": [],
-    "AVR.device.type": "atmega32",
-    "AVR.device.frequency": 1000000000
+    "C_Cpp.errorSquiggles": "Disabled"
 }
