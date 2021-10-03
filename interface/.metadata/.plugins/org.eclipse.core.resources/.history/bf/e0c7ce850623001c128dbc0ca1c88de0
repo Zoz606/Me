@@ -1,0 +1,14 @@
+#include <avr/io.h>
+long long* x;
+
+int main (void)
+{
+	while(1)
+	{
+		int y;
+		for (int var = 0; var < max; ++var) {
+
+		}
+
+	}
+}

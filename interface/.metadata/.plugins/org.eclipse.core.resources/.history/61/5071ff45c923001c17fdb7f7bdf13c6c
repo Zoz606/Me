@@ -1,0 +1,16 @@
+#include <avr/io.h>
+#define F_CPU 8000000UL
+#include <util/delay.h>
+#include "important_macros.h"
+
+int main (void)
+{
+	DDRA |= (1<<2);
+	while(1)
+	{
+		PORTA |= (1<<2);
+		_delay_ms(1000);
+		PORTA &= ~(1<<2);
+		_delay_ms(1000);
+	}
+}
