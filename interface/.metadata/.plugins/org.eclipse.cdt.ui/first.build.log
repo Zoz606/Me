@@ -1,34 +1,12 @@
-22:22:43 **** Incremental Build of configuration Debug for project first ****
+04:28:36 **** Incremental Build of configuration Debug for project first ****
 make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:2:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:3:
-e:/programs/drive-download-20211001t160329z-001/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: first.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./DIO.o ./main.o ./max.o   
-Finished building target: first.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S first.elf  >"first.lss"
-Finished building: first.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
-Finished building: first.hex
- 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 first.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:     122 bytes (0.4% Full)
+Program:    2606 bytes (8.0% Full)
 (.text + .data + .bootloader)
 
 Data:          0 bytes (0.0% Full)
@@ -38,5 +16,5 @@ Data:          0 bytes (0.0% Full)
 Finished building: sizedummy
  
 
-22:22:44 Build Finished (took 1s.105ms)
+04:28:36 Build Finished (took 272ms)
 

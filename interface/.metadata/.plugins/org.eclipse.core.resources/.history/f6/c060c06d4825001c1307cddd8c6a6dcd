@@ -1,0 +1,37 @@
+#include <avr/io.h>
+void dioSetPinDir(char port,char pin,char dir) {
+	switch (port) {
+		case 'A':
+		case 'a':
+			if (dir == 1) {
+				DDRA |= (1 << pin);
+			} else {
+				DDRA &= ~(1 << pin);
+			}
+			break;
+
+		case 'B':
+		case 'b':
+			if (dir == 1) {
+				DDRA |= (1 << pin);
+			} else {
+				DDRA &= ~(1 << pin);
+			}
+			break;
+
+		case 'C':
+		case 'c':
+			if (dir == 1) {
+							DDRA |= (1 << pin);
+						} else {
+							DDRA &= ~(1 << pin);
+						}
+			break;
+
+		case 'D':
+		case 'd':
+
+			break;
+
+	}
+}

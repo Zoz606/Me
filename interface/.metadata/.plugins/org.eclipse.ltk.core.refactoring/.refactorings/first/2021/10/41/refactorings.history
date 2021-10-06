@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;first/important_macros.h&apos; to &apos;std_macros.h&apos;" description="Rename resource &apos;important_macros.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="important_macros.h" name="std_macros.h" stamp="1633378446470" updateReferences="true"/>
+</session>

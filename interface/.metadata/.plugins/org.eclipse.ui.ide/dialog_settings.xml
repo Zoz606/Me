@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="E:\courses\ES\codes\interface\interface_part1_labs\use of volatile keyword"/>
+	</list>
 </section>
