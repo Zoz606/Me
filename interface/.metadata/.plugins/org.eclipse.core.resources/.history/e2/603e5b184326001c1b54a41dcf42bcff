@@ -1,9 +1,0 @@
-int x = 50,
-	y = 60,
-	z = 60;
-int main(void) {
-	z = x + y;
-	while(1) {
-
-	}
-}

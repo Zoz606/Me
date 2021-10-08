@@ -1,20 +1,33 @@
-04:28:36 **** Incremental Build of configuration Debug for project first ****
+09:31:59 **** Build of configuration Debug for project first ****
 make all 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./DIO.o ./LED.o ./main.o ./max.o   
+Finished building target: first.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S first.elf  >"first.lss"
+Finished building: first.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
+Finished building: first.hex
+ 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 first.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    2606 bytes (8.0% Full)
+Program:    5908 bytes (18.0% Full)
 (.text + .data + .bootloader)
 
-Data:          0 bytes (0.0% Full)
+Data:          8 bytes (0.4% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-04:28:36 Build Finished (took 272ms)
+09:32:00 Build Finished (took 821ms)
 

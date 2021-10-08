@@ -1,0 +1,13 @@
+09:28:50 **** Build of configuration Debug for project toggle led ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -w -Wall -Werror -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c:1:1: error: "F_CPU" redefined
+<command-line>: error: this is the location of the previous definition
+In file included from ../main.c:2:
+e:/programs/drive-download-20211001t160329z-001/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: error: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+make: *** [main.o] Error 1
+
+09:28:51 Build Finished (took 985ms)
+

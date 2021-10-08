@@ -1,5 +1,0 @@
-#ifndef DIO_H_
-#define DIO_H_
-void DIO_vSetPinDir (unsigned char port, unsigned char pin, unsigned char dir);
-void DIO_vWritePin (unsigned char port, unsigned char pin, unsigned char value);
-#endif /* DIO_H_ */

@@ -1,6 +1,0 @@
-#ifndef DIO_H_
-#define DIO_H_
-void dioSetPinDir(char port,char pin,char dir);
-void dioWritePin (char port, char pin, char value);
-
-#endif /* DIO_H_ */

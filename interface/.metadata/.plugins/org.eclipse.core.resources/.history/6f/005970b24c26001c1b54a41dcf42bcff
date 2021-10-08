@@ -1,6 +1,0 @@
-int main(void) {
-	z = x + y;
-	while(1) {
-
-	}
-}
