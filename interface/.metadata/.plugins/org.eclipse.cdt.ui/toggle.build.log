@@ -1,0 +1,46 @@
+03:54:33 **** Incremental Build of configuration Debug for project toggle ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:1:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:2:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: toggle.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,toggle.map -mmcu=atmega32 -o "toggle.elf"  ./DIO.o ./LED.o ./main.o   
+Finished building target: toggle.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S toggle.elf  >"toggle.lss"
+Finished building: toggle.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle.elf  "toggle.hex"
+Finished building: toggle.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 toggle.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6204 bytes (18.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\programs\Eclipse\03- IMT SDK\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -Uflash:w:toggle.hex:a
+avrdude: error: could not find USB device "USBasp" with vid=0x16c0 pid=0x5dc
+make: *** [avrdudedummy] Error 1
+
+03:54:34 Build Finished (took 1s.370ms)
+

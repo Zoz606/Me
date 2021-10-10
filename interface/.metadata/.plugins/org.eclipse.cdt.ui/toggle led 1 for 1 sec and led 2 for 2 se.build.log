@@ -1,0 +1,20 @@
+05:03:06 **** Incremental Build of configuration Debug for project toggle led 1 for 1 sec and led 2 for 2 se ****
+make all 
+Building target: toggle led 1 for 1 sec and led 2 for 2 se.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,toggle led 1 for 1 sec and led 2 for 2 se.map -mmcu=atmega32 -o "toggle led 1 for 1 sec and led 2 for 2 se.elf"  ./DIO.o ./LED.o ./main.o   
+avr-gcc.exe: led: No such file or directory
+avr-gcc.exe: 1: No such file or directory
+avr-gcc.exe: for: No such file or directory
+avr-gcc.exe: 1: No such file or directory
+avr-gcc.exe: sec: No such file or directory
+avr-gcc.exe: and: No such file or directory
+avr-gcc.exe: led: No such file or directory
+avr-gcc.exe: 2: No such file or directory
+avr-gcc.exe: for: No such file or directory
+avr-gcc.exe: 2: No such file or directory
+avr-gcc.exe: se.map: No such file or directory
+make: *** [toggle led 1 for 1 sec and led 2 for 2 se.elf] Error 1
+
+05:03:06 Build Finished (took 272ms)
+

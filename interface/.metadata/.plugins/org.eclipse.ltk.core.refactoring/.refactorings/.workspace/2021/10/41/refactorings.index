@@ -1,4 +1,9 @@
-1633655737122	Delete resource 'first'
-1633667436782	Delete resource 'first'
-1633678173315	Delete resource 'toggle led'
-1633678407694	Delete resource 'first'
+1633741108937	Delete resource 'toggle'
+1633747482500	Delete resource 'first'
+1633747502985	Delete resource 'toggle'
+1633748568216	Delete resource 'toggle led 1 for 1 sec and led 2 for 2 se/proteus'
+1633748660046	Rename resource 'toggle led 1 for 1 sec and led 2 for 2 se'
+1633749252921	Delete 4 resources
+1633749455971	Delete resource 'toggle_led_1_for_1_sec_and_led_2_for_2_sec/main,c'
+1633819229835	Delete resource 'first'
+1633819234160	Delete resource 'toggle_led_1_for_1_sec_and_led_2_for_2_sec'
