@@ -131,6 +131,46 @@ unsigned char DIO_u8ReadPin (unsigned char port, unsigned char pin) {
 	return value;
 }
 
+void DIO_vEnablePullUp(unsigned char port, unsigned char pin, unsigned char enable) {
+	switch (port) {
+	case 'A':
+	case 'a':
+		if (enable == 1) {
+			SET_BIT(PORTA, pin);
+		} else {
+			CLR_BIT(PORTA, pin);
+		}
+		break;
+
+	case 'B':
+	case 'b':
+		if (enable == 1) {
+			SET_BIT(PORTB, pin);
+		} else {
+			CLR_BIT(PORTB, pin);
+		}
+		break;
+
+	case 'C':
+	case 'c':
+		if (enable == 1) {
+			SET_BIT(PORTC, pin);
+		} else {
+			CLR_BIT(PORTC, pin);
+		}
+		break;
+
+	case 'D':
+	case 'd':
+		if (enable == 1) {
+			SET_BIT(PORTD, pin);
+		} else {
+			CLR_BIT(PORTD, pin);
+		}
+		break;
+	}
+}
+
 //port level
 void DIO_vSetPortDir(unsigned char port, unsigned char dir) {
 	switch (port) {

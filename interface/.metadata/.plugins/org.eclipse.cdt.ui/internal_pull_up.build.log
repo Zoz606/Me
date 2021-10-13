@@ -1,0 +1,36 @@
+09:45:05 **** Incremental Build of configuration Debug for project internal_pull_up ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../main.c
+ 
+Building target: internal_pull_up.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,internal_pull_up.map -mmcu=atmega32 -o "internal_pull_up.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
+Finished building target: internal_pull_up.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S internal_pull_up.elf  >"internal_pull_up.lss"
+Finished building: internal_pull_up.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 internal_pull_up.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3414 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+09:45:06 Build Finished (took 766ms)
+

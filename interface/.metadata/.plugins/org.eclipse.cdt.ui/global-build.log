@@ -849,3 +849,621 @@ Data:          0 bytes (0.0% Full)
 
 Finished building: sizedummy
  
+09:16:57 **** Build of configuration Debug for project first ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o ./max.o   
+Finished building target: first.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S first.elf  >"first.lss"
+Finished building: first.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
+Finished building: first.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2890 bytes (8.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:16:59 **** Build of configuration Debug for project internal_pull_up ****
+make all 
+Building file: ../BUTTON.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"BUTTON.d" -MT"BUTTON.o" -c -o "BUTTON.o" "../BUTTON.c"
+Finished building: ../BUTTON.c
+ 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED.d" -MT"LED.o" -c -o "LED.o" "../LED.c"
+Finished building: ../LED.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:12:20: warning: multi-character character constant
+../main.c: In function 'main':
+../main.c:12: warning: large integer implicitly truncated to unsigned type
+Finished building: ../main.c
+ 
+Building target: internal_pull_up.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,internal_pull_up.map -mmcu=atmega32 -o "internal_pull_up.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
+Finished building target: internal_pull_up.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S internal_pull_up.elf  >"internal_pull_up.lss"
+Finished building: internal_pull_up.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 internal_pull_up.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2890 bytes (8.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:17:14 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2890 bytes (8.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:17:14 **** Incremental Build of configuration Debug for project internal_pull_up ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:12:20: warning: multi-character character constant
+../main.c: In function 'main':
+../main.c:12: warning: large integer implicitly truncated to unsigned type
+Finished building: ../main.c
+ 
+Building target: internal_pull_up.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,internal_pull_up.map -mmcu=atmega32 -o "internal_pull_up.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
+Finished building target: internal_pull_up.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S internal_pull_up.elf  >"internal_pull_up.lss"
+Finished building: internal_pull_up.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 internal_pull_up.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2890 bytes (8.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:17:55 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2890 bytes (8.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:17:56 **** Incremental Build of configuration Debug for project internal_pull_up ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 internal_pull_up.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2890 bytes (8.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:40:06 **** Incremental Build of configuration Debug for project first ****
+make all 
+Building file: ../BUTTON.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"BUTTON.d" -MT"BUTTON.o" -c -o "BUTTON.o" "../BUTTON.c"
+Finished building: ../BUTTON.c
+ 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED.d" -MT"LED.o" -c -o "LED.o" "../LED.c"
+Finished building: ../LED.c
+ 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o ./max.o   
+Finished building target: first.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S first.elf  >"first.lss"
+Finished building: first.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
+Finished building: first.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3404 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:40:08 **** Incremental Build of configuration Debug for project internal_pull_up ****
+make all 
+Building file: ../BUTTON.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"BUTTON.d" -MT"BUTTON.o" -c -o "BUTTON.o" "../BUTTON.c"
+Finished building: ../BUTTON.c
+ 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED.d" -MT"LED.o" -c -o "LED.o" "../LED.c"
+Finished building: ../LED.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: internal_pull_up.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,internal_pull_up.map -mmcu=atmega32 -o "internal_pull_up.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
+Finished building target: internal_pull_up.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S internal_pull_up.elf  >"internal_pull_up.lss"
+Finished building: internal_pull_up.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 internal_pull_up.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3406 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:44:10 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3404 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:44:11 **** Incremental Build of configuration Debug for project internal_pull_up ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: internal_pull_up.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,internal_pull_up.map -mmcu=atmega32 -o "internal_pull_up.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
+Finished building target: internal_pull_up.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S internal_pull_up.elf  >"internal_pull_up.lss"
+Finished building: internal_pull_up.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 internal_pull_up.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3414 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:45:05 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3404 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:45:05 **** Incremental Build of configuration Debug for project internal_pull_up ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../main.c
+ 
+Building target: internal_pull_up.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,internal_pull_up.map -mmcu=atmega32 -o "internal_pull_up.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
+Finished building target: internal_pull_up.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S internal_pull_up.elf  >"internal_pull_up.lss"
+Finished building: internal_pull_up.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 internal_pull_up.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3414 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+02:29:54 **** Incremental Build of configuration Debug for project first ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o ./max.o   
+Finished building target: first.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S first.elf  >"first.lss"
+Finished building: first.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
+Finished building: first.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3388 bytes (10.3% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+02:31:28 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3388 bytes (10.3% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+02:37:22 **** Incremental Build of configuration Debug for project first ****
+make all 
+Building file: ../BUTTON.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"BUTTON.d" -MT"BUTTON.o" -c -o "BUTTON.o" "../BUTTON.c"
+Finished building: ../BUTTON.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:11: warning: implicit declaration of function 'BUTTON_u8Read'
+Finished building: ../main.c
+ 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o ./max.o   
+Finished building target: first.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S first.elf  >"first.lss"
+Finished building: first.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
+Finished building: first.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3394 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+02:38:10 **** Incremental Build of configuration Debug for project first ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:11: warning: implicit declaration of function 'BUTTON_u8Read'
+Finished building: ../main.c
+ 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o ./max.o   
+Finished building target: first.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S first.elf  >"first.lss"
+Finished building: first.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
+Finished building: first.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3394 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+02:39:08 **** Incremental Build of configuration Debug for project first ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:11: warning: implicit declaration of function 'BUTTON_u8Read'
+Finished building: ../main.c
+ 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o ./max.o   
+Finished building target: first.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S first.elf  >"first.lss"
+Finished building: first.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
+Finished building: first.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6514 bytes (19.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+02:40:12 **** Incremental Build of configuration Debug for project first ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:2:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o ./max.o   
+Finished building target: first.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S first.elf  >"first.lss"
+Finished building: first.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
+Finished building: first.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6508 bytes (19.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+02:40:34 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 first.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6508 bytes (19.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

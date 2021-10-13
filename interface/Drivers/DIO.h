@@ -14,6 +14,9 @@ void DIO_vTogglePin (unsigned char port, unsigned char pin);
 //Returns 0 if the value of the given pin is low and 1 if the value is high
 unsigned char DIO_u8ReadPin (unsigned char port, unsigned char pin);
 
+//To enable the internal pull up
+void DIO_vEnablePullUp(unsigned char port, unsigned char pin, unsigned char enable);
+
 
 //port level
 
