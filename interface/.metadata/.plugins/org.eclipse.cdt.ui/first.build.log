@@ -1,4 +1,4 @@
-02:40:34 **** Incremental Build of configuration Debug for project first ****
+07:02:12 **** Incremental Build of configuration Debug for project first ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 first.elf
@@ -6,7 +6,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    6508 bytes (19.9% Full)
+Program:    6512 bytes (19.9% Full)
 (.text + .data + .bootloader)
 
 Data:          8 bytes (0.4% Full)
@@ -16,5 +16,5 @@ Data:          8 bytes (0.4% Full)
 Finished building: sizedummy
  
 
-02:40:34 Build Finished (took 258ms)
+07:02:13 Build Finished (took 460ms)
 

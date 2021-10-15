@@ -1,0 +1,42 @@
+07:02:13 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:1:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:2:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: toggle_led_using_switch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
+Finished building target: toggle_led_using_switch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
+Finished building: toggle_led_using_switch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
+Finished building: toggle_led_using_switch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3416 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+07:02:14 Build Finished (took 1s.21ms)
+

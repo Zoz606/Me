@@ -1,5 +1,0 @@
-#include "DIO.h"
-
-void BUTTON_vInit (unsigned char port, unsigned char pin) {
-	DIO_vSetPinDir(port, pin, 0);
-}
