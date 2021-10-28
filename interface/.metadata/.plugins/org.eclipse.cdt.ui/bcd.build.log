@@ -1,0 +1,38 @@
+22:20:01 **** Incremental Build of configuration Debug for project bcd ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building target: bcd.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,bcd.map -mmcu=atmega32 -o "bcd.elf"  ./BCD7segment.o ./DIO.o ./main.o   
+Finished building target: bcd.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S bcd.elf  >"bcd.lss"
+Finished building: bcd.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex bcd.elf  "bcd.hex"
+Finished building: bcd.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 bcd.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6930 bytes (21.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:20:03 Build Finished (took 2s.652ms)
+

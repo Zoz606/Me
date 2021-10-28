@@ -32,4 +32,7 @@ void DIO_vTogglePort(unsigned char port);
 //Read the value of the port
 unsigned char DIO_u8ReadPort(unsigned char port);
 
+void DIO_vWriteLowNibble(unsigned char port, unsigned char value);
+
+void DIO_vWriteHighNibble(unsigned char port, unsigned char value);
 #endif /* DIO_H_ */

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="E:\courses\ES\codes\interface\interface_part3_labs\BCD to seven segment\BCD to seven segment"/>
 		<item value="E:\courses\ES\Me\interface\Drivers"/>
 		<item value="E:\courses\ES\Me\interface\toggle"/>
 		<item value="E:\courses\ES\Me\interface\first"/>

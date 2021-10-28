@@ -1,518 +1,54 @@
-06:30:14 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:30:28 **** Incremental Build of configuration Debug for project first ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 first.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:30:28 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:31:23 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:32:39 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Building file: ../BUTTON.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"BUTTON.d" -MT"BUTTON.o" -c -o "BUTTON.o" "../BUTTON.c"
-Finished building: ../BUTTON.c
- 
-Building file: ../DIO.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
-Finished building: ../DIO.c
- 
-Building file: ../LED.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED.d" -MT"LED.o" -c -o "LED.o" "../LED.c"
-Finished building: ../LED.c
- 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: toggle_led_using_switch.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:33:13 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Building target: toggle_led_using_switch.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
-Finished building: toggle_led_using_switch.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:33:57 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
+01:33:57 **** Incremental Build of configuration Debug for project relay ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: toggle_led_using_switch.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
-Finished building: toggle_led_using_switch.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:35:58 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: toggle_led_using_switch.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
-Finished building: toggle_led_using_switch.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:36:36 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: toggle_led_using_switch.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
-Finished building: toggle_led_using_switch.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:40:52 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: toggle_led_using_switch.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
-Finished building: toggle_led_using_switch.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6534 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:41:56 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: toggle_led_using_switch.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
-Finished building: toggle_led_using_switch.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    3416 bytes (10.4% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:49:44 **** Build of configuration Debug for project first ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: first.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o ./max.o   
-Finished building target: first.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S first.elf  >"first.lss"
-Finished building: first.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
-Finished building: first.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 first.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:49:45 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    3416 bytes (10.4% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:51:53 **** Incremental Build of configuration Debug for project first ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: first.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o ./max.o   
-Finished building target: first.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S first.elf  >"first.lss"
-Finished building: first.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
-Finished building: first.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 first.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-06:51:54 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: toggle_led_using_switch.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
-Finished building: toggle_led_using_switch.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    3416 bytes (10.4% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-07:00:52 **** Incremental Build of configuration Debug for project first ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 first.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-07:00:52 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
+In file included from ../main.c:1:
 e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 ../main.c: In function 'main':
-../main.c:19: error: expected declaration or statement at end of input
+../main.c:8: error: lvalue required as left operand of assignment
+../main.c:10: error: lvalue required as left operand of assignment
 make: *** [main.o] Error 1
-07:01:27 **** Incremental Build of configuration Debug for project first ****
+01:34:27 **** Incremental Build of configuration Debug for project relay ****
 make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:1:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:8: error: lvalue required as left operand of assignment
+../main.c:10: error: lvalue required as left operand of assignment
+make: *** [main.o] Error 1
+01:34:49 **** Incremental Build of configuration Debug for project relay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:1:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: relay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
+Finished building target: relay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S relay.elf  >"relay.lss"
+Finished building: relay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
+Finished building: relay.hex
+ 
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 first.elf
+avr-size --format=avr --mcu=atmega32 relay.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    6512 bytes (19.9% Full)
+Program:    7056 bytes (21.5% Full)
 (.text + .data + .bootloader)
 
 Data:          8 bytes (0.4% Full)
@@ -521,54 +57,35 @@ Data:          8 bytes (0.4% Full)
 
 Finished building: sizedummy
  
-07:01:28 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
+01:36:35 **** Incremental Build of configuration Debug for project relay ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
+In file included from ../main.c:1:
 e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
-Building target: toggle_led_using_switch.elf
+Building target: relay.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
+avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
+Finished building target: relay.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
+avr-objdump -h -S relay.elf  >"relay.lss"
+Finished building: relay.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
-Finished building: toggle_led_using_switch.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
+Finished building: relay.hex
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
+avr-size --format=avr --mcu=atmega32 relay.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    3400 bytes (10.4% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-07:02:12 **** Incremental Build of configuration Debug for project first ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 first.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6512 bytes (19.9% Full)
+Program:    7064 bytes (21.6% Full)
 (.text + .data + .bootloader)
 
 Data:          8 bytes (0.4% Full)
@@ -577,40 +94,249 @@ Data:          8 bytes (0.4% Full)
 
 Finished building: sizedummy
  
-07:02:13 **** Incremental Build of configuration Debug for project toggle_led_using_switch ****
+01:37:08 **** Incremental Build of configuration Debug for project relay ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:1:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../main.c:2:
+In file included from ../main.c:1:
 e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
-Building target: toggle_led_using_switch.elf
+Building target: relay.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,toggle_led_using_switch.map -mmcu=atmega32 -o "toggle_led_using_switch.elf"  ./BUTTON.o ./DIO.o ./LED.o ./main.o   
-Finished building target: toggle_led_using_switch.elf
+avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
+Finished building target: relay.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S toggle_led_using_switch.elf  >"toggle_led_using_switch.lss"
-Finished building: toggle_led_using_switch.lss
+avr-objdump -h -S relay.elf  >"relay.lss"
+Finished building: relay.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex toggle_led_using_switch.elf  "toggle_led_using_switch.hex"
-Finished building: toggle_led_using_switch.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
+Finished building: relay.hex
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 toggle_led_using_switch.elf
+avr-size --format=avr --mcu=atmega32 relay.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    3416 bytes (10.4% Full)
+Program:    7064 bytes (21.6% Full)
 (.text + .data + .bootloader)
 
-Data:          0 bytes (0.0% Full)
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:37:17 **** Incremental Build of configuration Debug for project relay ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 relay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7064 bytes (21.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:39:05 **** Incremental Build of configuration Debug for project relay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:1:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: relay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
+Finished building target: relay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S relay.elf  >"relay.lss"
+Finished building: relay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
+Finished building: relay.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 relay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7056 bytes (21.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:40:49 **** Incremental Build of configuration Debug for project relay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:1:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:10: error: 'portd' undeclared (first use in this function)
+../main.c:10: error: (Each undeclared identifier is reported only once
+../main.c:10: error: for each function it appears in.)
+make: *** [main.o] Error 1
+01:40:53 **** Incremental Build of configuration Debug for project relay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:1:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: relay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
+Finished building target: relay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S relay.elf  >"relay.lss"
+Finished building: relay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
+Finished building: relay.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 relay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7056 bytes (21.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:40:56 **** Incremental Build of configuration Debug for project relay ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 relay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7056 bytes (21.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:58:46 **** Incremental Build of configuration Debug for project relay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:1:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: relay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
+Finished building target: relay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S relay.elf  >"relay.lss"
+Finished building: relay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
+Finished building: relay.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 relay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7064 bytes (21.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:12:25 **** Incremental Build of configuration Debug for project relay ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 relay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7064 bytes (21.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:12:37 **** Incremental Build of configuration Debug for project relay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:1:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: relay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
+Finished building target: relay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S relay.elf  >"relay.lss"
+Finished building: relay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
+Finished building: relay.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 relay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7064 bytes (21.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
 (.data + .bss + .noinit)
 
 

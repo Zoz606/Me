@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Seven_segment.c, Seven_segment.h&apos; to &apos;first&apos;" description="Move 2 resources to &apos;first&apos;" destination="/first" element1="/Drivers/Seven_segment.c" element2="/Drivers/Seven_segment.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1634833095583" updateReferences="true"/>
+</session>
