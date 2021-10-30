@@ -1,0 +1,187 @@
+
+EEPROM.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000130  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .stab         000004b0  00000000  00000000  00000184  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  2 .stabstr      00000781  00000000  00000000  00000634  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   8:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  10:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  14:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  18:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  1c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  20:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  24:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  28:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  2c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  30:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  34:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  38:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  3c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  40:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  44:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  48:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  4c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  50:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+  60:	0e 94 8c 00 	call	0x118	; 0x118 <main>
+  64:	0c 94 96 00 	jmp	0x12c	; 0x12c <_exit>
+
+00000068 <__bad_interrupt>:
+  68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000006c <EEPROM_vWrite>:
+#include <avr/io.h>
+#include "std_macros.h"
+
+void EEPROM_vWrite(unsigned short address, unsigned char data) {
+  6c:	df 93       	push	r29
+  6e:	cf 93       	push	r28
+  70:	00 d0       	rcall	.+0      	; 0x72 <EEPROM_vWrite+0x6>
+  72:	0f 92       	push	r0
+  74:	cd b7       	in	r28, 0x3d	; 61
+  76:	de b7       	in	r29, 0x3e	; 62
+  78:	9a 83       	std	Y+2, r25	; 0x02
+  7a:	89 83       	std	Y+1, r24	; 0x01
+  7c:	6b 83       	std	Y+3, r22	; 0x03
+	//Set up address register
+	EEARL = (char)address;
+  7e:	ee e3       	ldi	r30, 0x3E	; 62
+  80:	f0 e0       	ldi	r31, 0x00	; 0
+  82:	89 81       	ldd	r24, Y+1	; 0x01
+  84:	80 83       	st	Z, r24
+	EEARH = (char)(address >> 8);
+  86:	ef e3       	ldi	r30, 0x3F	; 63
+  88:	f0 e0       	ldi	r31, 0x00	; 0
+  8a:	89 81       	ldd	r24, Y+1	; 0x01
+  8c:	9a 81       	ldd	r25, Y+2	; 0x02
+  8e:	89 2f       	mov	r24, r25
+  90:	99 27       	eor	r25, r25
+  92:	80 83       	st	Z, r24
+	//Set up data register
+	EEDR = data;
+  94:	ed e3       	ldi	r30, 0x3D	; 61
+  96:	f0 e0       	ldi	r31, 0x00	; 0
+  98:	8b 81       	ldd	r24, Y+3	; 0x03
+  9a:	80 83       	st	Z, r24
+	/*write logical one to EEMWE*/
+	SET_BIT(EECR, EEMWE);
+  9c:	ac e3       	ldi	r26, 0x3C	; 60
+  9e:	b0 e0       	ldi	r27, 0x00	; 0
+  a0:	ec e3       	ldi	r30, 0x3C	; 60
+  a2:	f0 e0       	ldi	r31, 0x00	; 0
+  a4:	80 81       	ld	r24, Z
+  a6:	84 60       	ori	r24, 0x04	; 4
+  a8:	8c 93       	st	X, r24
+	/*start EEPROM write by setting EEWE*/
+	SET_BIT(EECR, EEWE);
+  aa:	ac e3       	ldi	r26, 0x3C	; 60
+  ac:	b0 e0       	ldi	r27, 0x00	; 0
+  ae:	ec e3       	ldi	r30, 0x3C	; 60
+  b0:	f0 e0       	ldi	r31, 0x00	; 0
+  b2:	80 81       	ld	r24, Z
+  b4:	82 60       	ori	r24, 0x02	; 2
+  b6:	8c 93       	st	X, r24
+	while(READ_BIT(EECR, EEWE) == 1);
+  b8:	ec e3       	ldi	r30, 0x3C	; 60
+  ba:	f0 e0       	ldi	r31, 0x00	; 0
+  bc:	80 81       	ld	r24, Z
+  be:	88 2f       	mov	r24, r24
+  c0:	90 e0       	ldi	r25, 0x00	; 0
+  c2:	81 70       	andi	r24, 0x01	; 1
+  c4:	90 70       	andi	r25, 0x00	; 0
+  c6:	88 23       	and	r24, r24
+  c8:	b9 f7       	brne	.-18     	; 0xb8 <EEPROM_vWrite+0x4c>
+}
+  ca:	0f 90       	pop	r0
+  cc:	0f 90       	pop	r0
+  ce:	0f 90       	pop	r0
+  d0:	cf 91       	pop	r28
+  d2:	df 91       	pop	r29
+  d4:	08 95       	ret
+
+000000d6 <EEPROM_u8Read>:
+
+unsigned char EEPROM_u8Read(unsigned short address) {
+  d6:	df 93       	push	r29
+  d8:	cf 93       	push	r28
+  da:	00 d0       	rcall	.+0      	; 0xdc <EEPROM_u8Read+0x6>
+  dc:	cd b7       	in	r28, 0x3d	; 61
+  de:	de b7       	in	r29, 0x3e	; 62
+  e0:	9a 83       	std	Y+2, r25	; 0x02
+  e2:	89 83       	std	Y+1, r24	; 0x01
+
+	//Set up address register
+	EEARL = (char)address;
+  e4:	ee e3       	ldi	r30, 0x3E	; 62
+  e6:	f0 e0       	ldi	r31, 0x00	; 0
+  e8:	89 81       	ldd	r24, Y+1	; 0x01
+  ea:	80 83       	st	Z, r24
+	EEARH = (char)(address >> 8);
+  ec:	ef e3       	ldi	r30, 0x3F	; 63
+  ee:	f0 e0       	ldi	r31, 0x00	; 0
+  f0:	89 81       	ldd	r24, Y+1	; 0x01
+  f2:	9a 81       	ldd	r25, Y+2	; 0x02
+  f4:	89 2f       	mov	r24, r25
+  f6:	99 27       	eor	r25, r25
+  f8:	80 83       	st	Z, r24
+	//Set EEPROM read by setting EERE
+	SET_BIT(EECR, EERE);
+  fa:	ac e3       	ldi	r26, 0x3C	; 60
+  fc:	b0 e0       	ldi	r27, 0x00	; 0
+  fe:	ec e3       	ldi	r30, 0x3C	; 60
+ 100:	f0 e0       	ldi	r31, 0x00	; 0
+ 102:	80 81       	ld	r24, Z
+ 104:	81 60       	ori	r24, 0x01	; 1
+ 106:	8c 93       	st	X, r24
+	//Return data from data register
+	return EEDR;
+ 108:	ed e3       	ldi	r30, 0x3D	; 61
+ 10a:	f0 e0       	ldi	r31, 0x00	; 0
+ 10c:	80 81       	ld	r24, Z
+}
+ 10e:	0f 90       	pop	r0
+ 110:	0f 90       	pop	r0
+ 112:	cf 91       	pop	r28
+ 114:	df 91       	pop	r29
+ 116:	08 95       	ret
+
+00000118 <main>:
+#include "EEPROM.h"
+
+int main(void)
+{
+ 118:	df 93       	push	r29
+ 11a:	cf 93       	push	r28
+ 11c:	cd b7       	in	r28, 0x3d	; 61
+ 11e:	de b7       	in	r29, 0x3e	; 62
+	EEPROM_vWrite(0x0063, 0x52);
+ 120:	83 e6       	ldi	r24, 0x63	; 99
+ 122:	90 e0       	ldi	r25, 0x00	; 0
+ 124:	62 e5       	ldi	r22, 0x52	; 82
+ 126:	0e 94 36 00 	call	0x6c	; 0x6c <EEPROM_vWrite>
+ 12a:	ff cf       	rjmp	.-2      	; 0x12a <main+0x12>
+
+0000012c <_exit>:
+ 12c:	f8 94       	cli
+
+0000012e <__stop_program>:
+ 12e:	ff cf       	rjmp	.-2      	; 0x12e <__stop_program>

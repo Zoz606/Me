@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EEPROM/EEPROM.C&apos; to &apos;EEPROM.c&apos;" description="Rename resource &apos;EEPROM.C&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="EEPROM.C" name="EEPROM.c" stamp="1635546637048" updateReferences="true"/>
+</session>

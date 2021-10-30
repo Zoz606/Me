@@ -1,0 +1,19 @@
+#include <avr/io.h>
+#include "std_macros.h"
+int main(void)
+{
+	//Set up address register
+	EEARL = (char)0x0063;
+	EEARH = (char)(0x0063 >> 8);
+	//Set up data register
+	EEDR = 0x52;
+	/*write logical one to EEMWE*/
+	SET_BIT(EECR, 2);
+	/*start EEPROM write by setting EEWE*/
+	SET_BIT(EECR, 1);
+	while(READ_BIT(EECR, 1) == 1);
+    while(1)
+    {
+
+    }
+}

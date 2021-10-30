@@ -1,20 +1,30 @@
-22:20:04 **** Incremental Build of configuration Debug for project first ****
+00:26:36 **** Build of configuration Debug for project first ****
 make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 first.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    6682 bytes (20.4% Full)
-(.text + .data + .bootloader)
-
-Data:         18 bytes (0.9% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
+Building file: ../BUTTON.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"BUTTON.d" -MT"BUTTON.o" -c -o "BUTTON.o" "../BUTTON.c"
+Finished building: ../BUTTON.c
  
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../BCD7segment.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"BCD7segment.d" -MT"BCD7segment.o" -c -o "BCD7segment.o" "../BCD7segment.c"
+Finished building: ../BCD7segment.c
+ 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega32 -o "first.elf"  ./BCD7segment.o ./BUTTON.o ./DIO.o ./LED.o ./Seven_segment.o ./main.o ./max.o   
+./Seven_segment.o: In function `SEG_vInit':
+../Seven_segment.c:4: multiple definition of `SEG_vInit'
+./BCD7segment.o:../BCD7segment.c:4: first defined here
+./Seven_segment.o: In function `SEG_vInit':
+../Seven_segment.c:4: multiple definition of `SEG_vWrite'
+./BCD7segment.o:../BCD7segment.c:4: first defined here
+make: *** [first.elf] Error 1
 
-22:20:05 Build Finished (took 674ms)
+00:26:38 Build Finished (took 1s.510ms)
 

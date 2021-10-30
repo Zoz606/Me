@@ -1,8 +1,0 @@
-#include <util/delay.h>
-#include "DIO.h"
-
-int main(void) {
-	 while (1) {
-
-	 }
- }

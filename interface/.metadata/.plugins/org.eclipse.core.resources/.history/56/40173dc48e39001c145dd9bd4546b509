@@ -1,0 +1,10 @@
+#include <util/delay.h>
+#include "EEPROM.h"
+
+int main(void) {
+
+	EEPROM_vWrite(0x0030, 0x50);
+	while (1) {
+
+	}
+}

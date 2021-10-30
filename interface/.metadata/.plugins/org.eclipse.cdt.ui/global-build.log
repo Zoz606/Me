@@ -1,342 +1,149 @@
-01:33:57 **** Incremental Build of configuration Debug for project relay ****
+19:32:30 **** Incremental Build of configuration Debug for project EEPROM ****
+make all 
+Building target: EEPROM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,EEPROM.map -mmcu=atmega32 -o "EEPROM.elf"  ./EEPROM.o ./main.o   
+Finished building target: EEPROM.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex EEPROM.elf  "EEPROM.hex"
+Finished building: EEPROM.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex EEPROM.elf  "EEPROM.eep"
+Finished building: EEPROM.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 EEPROM.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     304 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:33:56 **** Incremental Build of configuration Debug for project EEPROM ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 ../main.c: In function 'main':
-../main.c:8: error: lvalue required as left operand of assignment
-../main.c:10: error: lvalue required as left operand of assignment
-make: *** [main.o] Error 1
-01:34:27 **** Incremental Build of configuration Debug for project relay ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c: In function 'main':
-../main.c:8: error: lvalue required as left operand of assignment
-../main.c:10: error: lvalue required as left operand of assignment
-make: *** [main.o] Error 1
-01:34:49 **** Incremental Build of configuration Debug for project relay ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:11: warning: implicit declaration of function 'SET_BIT'
 Finished building: ../main.c
  
-Building target: relay.elf
+Building target: EEPROM.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
-Finished building target: relay.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S relay.elf  >"relay.lss"
-Finished building: relay.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
-Finished building: relay.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7056 bytes (21.5% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-01:36:35 **** Incremental Build of configuration Debug for project relay ****
+avr-gcc -Wl,-Map,EEPROM.map -mmcu=atmega32 -o "EEPROM.elf"  ./EEPROM.o ./main.o   
+./main.o: In function `main':
+../main.c:11: undefined reference to `SET_BIT'
+../main.c:13: undefined reference to `SET_BIT'
+make: *** [EEPROM.elf] Error 1
+19:34:11 **** Incremental Build of configuration Debug for project EEPROM ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
-Building target: relay.elf
+Building target: EEPROM.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
-Finished building target: relay.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S relay.elf  >"relay.lss"
-Finished building: relay.lss
+avr-gcc -Wl,-Map,EEPROM.map -mmcu=atmega32 -o "EEPROM.elf"  ./EEPROM.o ./main.o   
+Finished building target: EEPROM.elf
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
-Finished building: relay.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex EEPROM.elf  "EEPROM.hex"
+Finished building: EEPROM.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex EEPROM.elf  "EEPROM.eep"
+Finished building: EEPROM.eep
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
+avr-size --format=avr --mcu=atmega32 EEPROM.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7064 bytes (21.6% Full)
+Program:     344 bytes (1.0% Full)
 (.text + .data + .bootloader)
 
-Data:          8 bytes (0.4% Full)
+Data:          0 bytes (0.0% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
-01:37:08 **** Incremental Build of configuration Debug for project relay ****
+19:34:46 **** Incremental Build of configuration Debug for project EEPROM ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
-Building target: relay.elf
+Building target: EEPROM.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
-Finished building target: relay.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S relay.elf  >"relay.lss"
-Finished building: relay.lss
+avr-gcc -Wl,-Map,EEPROM.map -mmcu=atmega32 -o "EEPROM.elf"  ./EEPROM.o ./main.o   
+Finished building target: EEPROM.elf
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
-Finished building: relay.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex EEPROM.elf  "EEPROM.hex"
+Finished building: EEPROM.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex EEPROM.elf  "EEPROM.eep"
+Finished building: EEPROM.eep
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
+avr-size --format=avr --mcu=atmega32 EEPROM.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7064 bytes (21.6% Full)
+Program:     362 bytes (1.1% Full)
 (.text + .data + .bootloader)
 
-Data:          8 bytes (0.4% Full)
+Data:          0 bytes (0.0% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
-01:37:17 **** Incremental Build of configuration Debug for project relay ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7064 bytes (21.6% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-01:39:05 **** Incremental Build of configuration Debug for project relay ****
+19:35:17 **** Incremental Build of configuration Debug for project EEPROM ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
-Building target: relay.elf
+Building target: EEPROM.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
-Finished building target: relay.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S relay.elf  >"relay.lss"
-Finished building: relay.lss
+avr-gcc -Wl,-Map,EEPROM.map -mmcu=atmega32 -o "EEPROM.elf"  ./EEPROM.o ./main.o   
+Finished building target: EEPROM.elf
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
-Finished building: relay.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex EEPROM.elf  "EEPROM.hex"
+Finished building: EEPROM.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex EEPROM.elf  "EEPROM.eep"
+Finished building: EEPROM.eep
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
+avr-size --format=avr --mcu=atmega32 EEPROM.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7056 bytes (21.5% Full)
+Program:     362 bytes (1.1% Full)
 (.text + .data + .bootloader)
 
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-01:40:49 **** Incremental Build of configuration Debug for project relay ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c: In function 'main':
-../main.c:10: error: 'portd' undeclared (first use in this function)
-../main.c:10: error: (Each undeclared identifier is reported only once
-../main.c:10: error: for each function it appears in.)
-make: *** [main.o] Error 1
-01:40:53 **** Incremental Build of configuration Debug for project relay ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: relay.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
-Finished building target: relay.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S relay.elf  >"relay.lss"
-Finished building: relay.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
-Finished building: relay.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7056 bytes (21.5% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-01:40:56 **** Incremental Build of configuration Debug for project relay ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7056 bytes (21.5% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-01:58:46 **** Incremental Build of configuration Debug for project relay ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: relay.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
-Finished building target: relay.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S relay.elf  >"relay.lss"
-Finished building: relay.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
-Finished building: relay.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7064 bytes (21.6% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-23:12:25 **** Incremental Build of configuration Debug for project relay ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7064 bytes (21.6% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-23:12:37 **** Incremental Build of configuration Debug for project relay ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:1:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: relay.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,relay.map -mmcu=atmega32 -o "relay.elf"  ./DIO.o ./main.o   
-Finished building target: relay.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S relay.elf  >"relay.lss"
-Finished building: relay.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex relay.elf  "relay.hex"
-Finished building: relay.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 relay.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7064 bytes (21.6% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
+Data:          0 bytes (0.0% Full)
 (.data + .bss + .noinit)
 
 

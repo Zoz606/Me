@@ -1,0 +1,9 @@
+#include "EEPROM.h"
+int main(void)
+{
+	EEPROM_vWrite(30,50);
+    while(1)
+    {
+
+    }
+}
