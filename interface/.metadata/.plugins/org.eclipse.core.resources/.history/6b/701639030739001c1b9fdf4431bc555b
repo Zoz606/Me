@@ -1,5 +1,0 @@
-#include <avr/io.h>
-
-void EEPROM_vWrite(unsigned char address, unsigned char data) {
-
-}

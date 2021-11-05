@@ -1,9 +1,0 @@
-#include "EEPROM.h"
-int main(void)
-{
-	EEPROM_vWrite(0x0064, 0x53);
-    while(1)
-    {
-
-    }
-}

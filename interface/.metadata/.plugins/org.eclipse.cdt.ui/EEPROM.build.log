@@ -1,10 +1,5 @@
-19:35:17 **** Incremental Build of configuration Debug for project EEPROM ****
+18:52:36 **** Incremental Build of configuration Debug for project EEPROM ****
 make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
 Building target: EEPROM.elf
 Invoking: AVR C Linker
 avr-gcc -Wl,-Map,EEPROM.map -mmcu=atmega32 -o "EEPROM.elf"  ./EEPROM.o ./main.o   
@@ -14,17 +9,13 @@ Create Flash image (ihex format)
 avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex EEPROM.elf  "EEPROM.hex"
 Finished building: EEPROM.hex
  
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex EEPROM.elf  "EEPROM.eep"
-Finished building: EEPROM.eep
- 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 EEPROM.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:     362 bytes (1.1% Full)
+Program:     284 bytes (0.9% Full)
 (.text + .data + .bootloader)
 
 Data:          0 bytes (0.0% Full)
@@ -34,5 +25,5 @@ Data:          0 bytes (0.0% Full)
 Finished building: sizedummy
  
 
-19:35:18 Build Finished (took 765ms)
+18:52:36 Build Finished (took 570ms)
 

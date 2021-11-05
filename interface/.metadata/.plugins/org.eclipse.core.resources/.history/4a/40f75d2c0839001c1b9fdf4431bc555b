@@ -1,9 +1,0 @@
-#include <avr/io.h>
-#include "std_macros.h"
-
-void EEPROM_vWrite(unsigned short address, unsigned char data) {
-	SET_BIT(EECR, 2);
-
-	EEAR = address;
-	EEDR = data;
-}

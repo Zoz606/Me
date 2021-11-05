@@ -1,5 +1,0 @@
-#include <avr/io.h>
-
-void EEPROM_vWrite(unsigned short address, unsigned char data) {
-	EEAR = address;
-}
