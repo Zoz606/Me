@@ -1,0 +1,16 @@
+#include <avr/interrupt.h>
+#include <avr/io.h>
+#include <util/delay.h>
+#include "DIO.h"
+#include "std_macros.h"
+
+// Set rising edge for external int0
+SET_BIT(MCUCR, ISC00);
+SET_BIT(MCUCR, ISC01);
+
+// Set rising edge for external int1
+SET_BIT(MCUCR, ISC10);
+SET_BIT(MCUCR, ISC11);
+
+// Set rising edge for external int2
+SET_BIT(MCUCSR, ISC2);

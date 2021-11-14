@@ -1,0 +1,45 @@
+07:44:06 **** Build of configuration Debug for project int_examble ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+Finished building: ../src/DIO.c
+ 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:1:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/main.c
+ 
+Building target: int_examble.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,int_examble.map -mmcu=atmega32 -o "int_examble.elf"  ./src/DIO.o ./src/main.o   
+Finished building target: int_examble.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S int_examble.elf  >"int_examble.lss"
+Finished building: int_examble.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex int_examble.elf  "int_examble.hex"
+Finished building: int_examble.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 int_examble.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6970 bytes (21.3% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+07:44:07 Build Finished (took 1s.312ms)
+

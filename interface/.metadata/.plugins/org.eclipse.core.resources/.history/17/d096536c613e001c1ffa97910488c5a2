@@ -1,0 +1,14 @@
+#include <util/delay.h>
+#include "DIO.h"
+#define F_CPU 8000000UL
+#include <avr/io.h>
+
+int main(void) {
+	DIO_vSetPinDir('D', 7, 1); //initialize led
+	DIO_vSetPinDir('D', 2, 1); //initialize button
+	sei(); //open global interrupt bit
+	MCUCR |= (1 << ISC01)|(1 << ISC00);
+	while (1) {
+
+	}
+}

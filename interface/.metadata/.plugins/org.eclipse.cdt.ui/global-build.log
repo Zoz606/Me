@@ -1,12 +1,34 @@
-23:48:58 **** Incremental Build of configuration Debug for project interrupt ****
+07:22:49 **** Incremental Build of configuration Debug for project int_driver ****
 make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c:1:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../src/main.c:2:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/main.c
+ 
+Building target: int_driver.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,int_driver.map -mmcu=atmega32 -o "int_driver.elf"  ./src/DIO.o ./src/interrupt.o ./src/main.o   
+Finished building target: int_driver.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S int_driver.elf  >"int_driver.lss"
+Finished building: int_driver.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex int_driver.elf  "int_driver.hex"
+Finished building: int_driver.hex
+ 
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 interrupt.elf
+avr-size --format=avr --mcu=atmega32 int_driver.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7518 bytes (22.9% Full)
+Program:    6970 bytes (21.3% Full)
 (.text + .data + .bootloader)
 
 Data:          8 bytes (0.4% Full)
@@ -15,37 +37,44 @@ Data:          8 bytes (0.4% Full)
 
 Finished building: sizedummy
  
-23:50:51 **** Incremental Build of configuration Debug for project interrupt ****
+07:44:06 **** Clean-only build of configuration Debug for project int_examble ****
+make clean 
+rm -rf  int_driver.hex  ./src/DIO.o ./src/interrupt.o ./src/main.o  sizedummy  int_driver.lss  ./src/DIO.d ./src/interrupt.d ./src/main.d  int_driver.elf
+ 
+07:44:06 **** Build of configuration Debug for project int_examble ****
 make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+Finished building: ../src/DIO.c
+ 
 Building file: ../src/main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-../src/main.c:2:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../src/main.c:3:
+In file included from ../src/main.c:1:
 e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../src/main.c
  
-Building target: interrupt.elf
+Building target: int_examble.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,interrupt.map -mmcu=atmega32 -o "interrupt.elf"  ./src/DIO.o ./src/LED.o ./src/main.o   
-Finished building target: interrupt.elf
+avr-gcc -Wl,-Map,int_examble.map -mmcu=atmega32 -o "int_examble.elf"  ./src/DIO.o ./src/main.o   
+Finished building target: int_examble.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S interrupt.elf  >"interrupt.lss"
-Finished building: interrupt.lss
+avr-objdump -h -S int_examble.elf  >"int_examble.lss"
+Finished building: int_examble.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex interrupt.elf  "interrupt.hex"
-Finished building: interrupt.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex int_examble.elf  "int_examble.hex"
+Finished building: int_examble.hex
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 interrupt.elf
+avr-size --format=avr --mcu=atmega32 int_examble.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7518 bytes (22.9% Full)
+Program:    6970 bytes (21.3% Full)
 (.text + .data + .bootloader)
 
 Data:          8 bytes (0.4% Full)
@@ -54,37 +83,59 @@ Data:          8 bytes (0.4% Full)
 
 Finished building: sizedummy
  
-23:51:53 **** Incremental Build of configuration Debug for project interrupt ****
+07:53:26 **** Build of configuration Debug for project multiple_int ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+Finished building: ../src/DIO.c
+ 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../src/main.c:8: error: expected identifier or '(' before 'volatile'
+../src/main.c:8: error: expected ')' before '(' token
+../src/main.c:8: error: expected ')' before '|=' token
+../src/main.c:9: error: expected identifier or '(' before 'volatile'
+../src/main.c:9: error: expected ')' before '(' token
+../src/main.c:9: error: expected ')' before '|=' token
+../src/main.c:12: error: expected identifier or '(' before 'volatile'
+../src/main.c:12: error: expected ')' before '(' token
+../src/main.c:12: error: expected ')' before '|=' token
+../src/main.c:13: error: expected identifier or '(' before 'volatile'
+../src/main.c:13: error: expected ')' before '(' token
+../src/main.c:13: error: expected ')' before '|=' token
+../src/main.c:16: error: expected identifier or '(' before 'volatile'
+../src/main.c:16: error: expected ')' before '(' token
+../src/main.c:16: error: expected ')' before '|=' token
+make: *** [src/main.o] Error 1
+08:00:19 **** Incremental Build of configuration Debug for project multiple_int ****
 make all 
 Building file: ../src/main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-../src/main.c:2:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../src/main.c:3:
+In file included from ../src/main.c:2:
 e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../src/main.c
  
-Building target: interrupt.elf
+Building target: multiple_int.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,interrupt.map -mmcu=atmega32 -o "interrupt.elf"  ./src/DIO.o ./src/LED.o ./src/main.o   
-Finished building target: interrupt.elf
+avr-gcc -Wl,-Map,multiple_int.map -mmcu=atmega32 -o "multiple_int.elf"  ./src/DIO.o ./src/main.o   
+Finished building target: multiple_int.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S interrupt.elf  >"interrupt.lss"
-Finished building: interrupt.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex interrupt.elf  "interrupt.hex"
-Finished building: interrupt.hex
+avr-objdump -h -S multiple_int.elf  >"multiple_int.lss"
+Finished building: multiple_int.lss
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 interrupt.elf
+avr-size --format=avr --mcu=atmega32 multiple_int.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7518 bytes (22.9% Full)
+Program:    7730 bytes (23.6% Full)
 (.text + .data + .bootloader)
 
 Data:          8 bytes (0.4% Full)
@@ -93,115 +144,28 @@ Data:          8 bytes (0.4% Full)
 
 Finished building: sizedummy
  
-23:52:09 **** Incremental Build of configuration Debug for project interrupt ****
+08:07:47 **** Incremental Build of configuration Debug for project multiple_int ****
 make all 
-Building file: ../src/main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-../src/main.c:2:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../src/main.c:3:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../src/main.c
- 
-Building target: interrupt.elf
+Building target: multiple_int.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,interrupt.map -mmcu=atmega32 -o "interrupt.elf"  ./src/DIO.o ./src/LED.o ./src/main.o   
-Finished building target: interrupt.elf
+avr-gcc -Wl,-Map,multiple_int.map -mmcu=atmega32 -o "multiple_int.elf"  ./src/DIO.o ./src/main.o   
+Finished building target: multiple_int.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S interrupt.elf  >"interrupt.lss"
-Finished building: interrupt.lss
+avr-objdump -h -S multiple_int.elf  >"multiple_int.lss"
+Finished building: multiple_int.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex interrupt.elf  "interrupt.hex"
-Finished building: interrupt.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex multiple_int.elf  "multiple_int.hex"
+Finished building: multiple_int.hex
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 interrupt.elf
+avr-size --format=avr --mcu=atmega32 multiple_int.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7518 bytes (22.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-00:12:37 **** Incremental Build of configuration Debug for project interrupt ****
-make all 
-Building file: ../src/main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-../src/main.c:2:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../src/main.c:3:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../src/main.c
- 
-Building target: interrupt.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,interrupt.map -mmcu=atmega32 -o "interrupt.elf"  ./src/DIO.o ./src/LED.o ./src/main.o   
-Finished building target: interrupt.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S interrupt.elf  >"interrupt.lss"
-Finished building: interrupt.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex interrupt.elf  "interrupt.hex"
-Finished building: interrupt.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 interrupt.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7518 bytes (22.9% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-01:11:33 **** Build of configuration Debug for project interrupt ****
-make all 
-Building file: ../src/main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-../src/main.c:2:1: warning: "F_CPU" redefined
-<command-line>: warning: this is the location of the previous definition
-In file included from ../src/main.c:3:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../src/main.c
- 
-Building target: interrupt.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,interrupt.map -mmcu=atmega32 -o "interrupt.elf"  ./src/DIO.o ./src/LED.o ./src/main.o   
-Finished building target: interrupt.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S interrupt.elf  >"interrupt.lss"
-Finished building: interrupt.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex interrupt.elf  "interrupt.hex"
-Finished building: interrupt.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 interrupt.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7518 bytes (22.9% Full)
+Program:    7730 bytes (23.6% Full)
 (.text + .data + .bootloader)
 
 Data:          8 bytes (0.4% Full)
