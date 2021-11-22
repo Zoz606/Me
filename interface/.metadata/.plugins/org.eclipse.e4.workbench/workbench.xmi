@@ -391,13 +391,13 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_wxcRBD50Eeywr-wT_zyNXw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_JDQz4D8qEeyiKbuNaqdNVA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_wxvzqD50Eeywr-wT_zyNXw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_qmdIMElmEeyX04LDOIkEEw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_wxvzqD50Eeywr-wT_zyNXw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_wxcRFD50Eeywr-wT_zyNXw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_wxcRFT50Eeywr-wT_zyNXw" elementId="additions" toBeRendered="false"/>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_LeRdwD8qEeyiKbuNaqdNVA">
+      <children xsi:type="menu:ToolBar" xmi:id="_LeRdwD8qEeyiKbuNaqdNVA" visible="false">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RhfVID7BEeyr4ddBvE9uQw" visible="false">
@@ -580,7 +580,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_wxcRpj50Eeywr-wT_zyNXw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_JGdR0D8qEeyiKbuNaqdNVA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wxvzEj50Eeywr-wT_zyNXw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_qmtm4ElmEeyX04LDOIkEEw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wxvzEj50Eeywr-wT_zyNXw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_wxcRsT50Eeywr-wT_zyNXw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
