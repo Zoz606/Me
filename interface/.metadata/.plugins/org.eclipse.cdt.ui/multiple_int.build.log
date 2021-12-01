@@ -1,18 +1,5 @@
-08:07:47 **** Incremental Build of configuration Debug for project multiple_int ****
+16:49:30 **** Build of configuration Debug for project multiple_int ****
 make all 
-Building target: multiple_int.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,multiple_int.map -mmcu=atmega32 -o "multiple_int.elf"  ./src/DIO.o ./src/main.o   
-Finished building target: multiple_int.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S multiple_int.elf  >"multiple_int.lss"
-Finished building: multiple_int.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex multiple_int.elf  "multiple_int.hex"
-Finished building: multiple_int.hex
- 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 multiple_int.elf
 AVR Memory Usage
@@ -29,5 +16,5 @@ Data:          8 bytes (0.4% Full)
 Finished building: sizedummy
  
 
-08:07:47 Build Finished (took 757ms)
+16:49:30 Build Finished (took 435ms)
 
