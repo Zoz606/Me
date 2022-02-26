@@ -1,27 +1,679 @@
-17:09:31 **** Incremental Build of configuration Debug for project LCD1 ****
+01:06:15 **** Incremental Build of configuration Debug for project LCD1 ****
 make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+../src/DIO.c:3:29: error: typedefKeywords.h: No such file or directory
+../src/DIO.c:6: error: expected ')' before 'port'
+../src/DIO.c:46: error: expected ')' before 'port'
+../src/DIO.c:86: error: expected ')' before 'port'
+../src/DIO.c:110: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_U8ReadPin'
+../src/DIO.c:136: error: expected ')' before 'port'
+../src/DIO.c:177: error: expected ')' before 'port'
+../src/DIO.c:201: error: expected ')' before 'port'
+../src/DIO.c:225: error: expected ')' before 'port'
+../src/DIO.c:249: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8ReadPort'
+../src/DIO.c:275: error: expected ')' before 'port'
+../src/DIO.c:306: error: expected ')' before 'port'
+make: *** [src/DIO.o] Error 1
+01:08:11 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+Finished building: ../src/DIO.c
+ 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+make: *** [src/LCD.o] Error 1
+01:56:42 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+make: *** [src/LCD.o] Error 1
+01:59:29 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+make: *** [src/LCD.o] Error 1
+07:31:10 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+make: *** [src/LCD.o] Error 1
+07:36:07 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+make: *** [src/LCD.o] Error 1
+07:40:01 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+make: *** [src/LCD.o] Error 1
+23:46:10 **** Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.h:1,
+                 from ../src/LCD.c:3:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../src/LCD.c: In function 'LCD_vInit':
+../src/LCD.c:8: error: expected '=', ',', ';', 'asm' or '__attribute__' before '<=' token
+../src/LCD.c:11: error: expected expression before '}' token
+../src/LCD.c:11: error: expected expression before '}' token
+../src/LCD.c:11: error: expected expression before '}' token
+../src/LCD.c:8: warning: unused variable 'i'
+make: *** [src/LCD.o] Error 1
+23:49:01 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.h:1,
+                 from ../src/LCD.c:3:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+make: *** [src/LCD.o] Error 1
+00:22:47 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.h:1,
+                 from ../src/LCD.c:3:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+make: *** [src/LCD.o] Error 1
+07:59:09 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.h:1,
+                 from ../src/LCD.c:3:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+make: *** [src/LCD.o] Error 1
+07:59:20 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.h:1,
+                 from ../src/LCD.c:3:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+make: *** [src/LCD.o] Error 1
+08:04:39 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.h:3,
+                 from ../src/LCD.c:3:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+make: *** [src/LCD.o] Error 1
+09:50:19 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+Finished building: ../src/DIO.c
+ 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:2: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:3: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:5: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:7: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:9: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:11: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:11: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.h:3,
+                 from ../src/LCD.c:3:
+../src/typedef_keywords.h:2: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:3: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:5: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:7: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:9: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:11: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:11: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+make: *** [src/LCD.o] Error 1
+10:01:38 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:2: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:3: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:5: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:7: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:9: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:11: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:11: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.h:3,
+                 from ../src/LCD.c:3:
+../src/typedef_keywords.h:2: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:3: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:5: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:7: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:9: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:11: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:11: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+make: *** [src/LCD.o] Error 1
+10:10:04 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+Finished building: ../src/DIO.c
+ 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:2:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.h:3,
+                 from ../src/LCD.c:3:
+../src/typedef_keywords.h:1: error: redefinition of typedef 'UINT8'
+../src/typedef_keywords.h:1: error: previous declaration of 'UINT8' was here
+../src/typedef_keywords.h:2: error: redefinition of typedef 'SINT8'
+../src/typedef_keywords.h:2: error: previous declaration of 'SINT8' was here
+../src/typedef_keywords.h:3: error: redefinition of typedef 'UINT16'
+../src/typedef_keywords.h:3: error: previous declaration of 'UINT16' was here
+../src/typedef_keywords.h:4: error: redefinition of typedef 'SINT16'
+../src/typedef_keywords.h:4: error: previous declaration of 'SINT16' was here
+../src/typedef_keywords.h:5: error: redefinition of typedef 'UINT32'
+../src/typedef_keywords.h:5: error: previous declaration of 'UINT32' was here
+../src/typedef_keywords.h:6: error: redefinition of typedef 'SINT32'
+../src/typedef_keywords.h:6: error: previous declaration of 'SINT32' was here
+../src/typedef_keywords.h:7: error: redefinition of typedef 'UINT64'
+../src/typedef_keywords.h:7: error: previous declaration of 'UINT64' was here
+../src/typedef_keywords.h:8: error: redefinition of typedef 'SINT64'
+../src/typedef_keywords.h:8: error: previous declaration of 'SINT64' was here
+../src/typedef_keywords.h:9: error: redefinition of typedef 'FLOAT32'
+../src/typedef_keywords.h:9: error: previous declaration of 'FLOAT32' was here
+../src/typedef_keywords.h:10: error: redefinition of typedef 'FLOAT64'
+../src/typedef_keywords.h:10: error: previous declaration of 'FLOAT64' was here
+In file included from ../src/LCD.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+make: *** [src/LCD.o] Error 1
+10:13:39 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/LCD.c
+ 
 Building file: ../src/main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-../src/main.c:1:10: warning: missing terminating " character
-../src/main.c:1:10: error: #include expects "FILENAME" or <FILENAME>
-../src/main.c:4: warning: return type of 'main' is not 'int'
-make: *** [src/main.o] Error 1
-17:09:52 **** Incremental Build of configuration Debug for project LCD1 ****
-make all 
-Building file: ../src/main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-../src/main.c:1:10: warning: missing terminating " character
-../src/main.c:1:10: error: #include expects "FILENAME" or <FILENAME>
-../src/main.c:4: warning: return type of 'main' is not 'int'
-make: *** [src/main.o] Error 1
-17:10:15 **** Incremental Build of configuration Debug for project LCD1 ****
-make all 
-Building file: ../src/main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-../src/main.c:4: warning: return type of 'main' is not 'int'
+../src/main.c:1:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../src/main.c:4:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../src/main.c
  
 Building target: LCD1.elf
@@ -43,20 +695,102 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    3686 bytes (11.2% Full)
+Program:    8834 bytes (27.0% Full)
 (.text + .data + .bootloader)
 
-Data:          0 bytes (0.0% Full)
+Data:          8 bytes (0.4% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
-17:10:29 **** Incremental Build of configuration Debug for project LCD1 ****
+10:21:47 **** Incremental Build of configuration Debug for project LCD1 ****
 make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+../src/DIO.c:3:30: error: typedef_keywords.h: No such file or directory
+../src/DIO.c:6: error: expected ')' before 'port'
+../src/DIO.c:46: error: expected ')' before 'port'
+../src/DIO.c:86: error: expected ')' before 'port'
+../src/DIO.c:110: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_U8ReadPin'
+../src/DIO.c:136: error: expected ')' before 'port'
+../src/DIO.c:177: error: expected ')' before 'port'
+../src/DIO.c:201: error: expected ')' before 'port'
+../src/DIO.c:225: error: expected ')' before 'port'
+../src/DIO.c:249: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8ReadPort'
+../src/DIO.c:275: error: expected ')' before 'port'
+../src/DIO.c:306: error: expected ')' before 'port'
+make: *** [src/DIO.o] Error 1
+10:22:32 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+../src/DIO.c:3:30: error: typedef_keywords.h: No such file or directory
+../src/DIO.c:6: error: expected ')' before 'port'
+../src/DIO.c:46: error: expected ')' before 'port'
+../src/DIO.c:86: error: expected ')' before 'port'
+../src/DIO.c:110: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_U8ReadPin'
+../src/DIO.c:136: error: expected ')' before 'port'
+../src/DIO.c:177: error: expected ')' before 'port'
+../src/DIO.c:201: error: expected ')' before 'port'
+../src/DIO.c:225: error: expected ')' before 'port'
+../src/DIO.c:249: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8ReadPort'
+../src/DIO.c:275: error: expected ')' before 'port'
+../src/DIO.c:306: error: expected ')' before 'port'
+make: *** [src/DIO.o] Error 1
+10:24:08 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+../src/DIO.c:46: error: expected ')' before 'port'
+../src/DIO.c:86: error: expected ')' before 'port'
+../src/DIO.c:110: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_U8ReadPin'
+../src/DIO.c:136: error: expected ')' before 'port'
+../src/DIO.c:177: error: expected ')' before 'port'
+../src/DIO.c:201: error: expected ')' before 'port'
+../src/DIO.c:225: error: expected ')' before 'port'
+../src/DIO.c:249: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8ReadPort'
+../src/DIO.c:275: error: expected ')' before 'port'
+../src/DIO.c:306: error: expected ')' before 'port'
+make: *** [src/DIO.o] Error 1
+10:24:10 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+../src/DIO.c:46: error: expected ')' before 'port'
+../src/DIO.c:86: error: expected ')' before 'port'
+../src/DIO.c:110: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_U8ReadPin'
+../src/DIO.c:136: error: expected ')' before 'port'
+../src/DIO.c:177: error: expected ')' before 'port'
+../src/DIO.c:201: error: expected ')' before 'port'
+../src/DIO.c:225: error: expected ')' before 'port'
+../src/DIO.c:249: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8ReadPort'
+../src/DIO.c:275: error: expected ')' before 'port'
+../src/DIO.c:306: error: expected ')' before 'port'
+make: *** [src/DIO.o] Error 1
+10:27:00 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+Finished building: ../src/DIO.c
+ 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/LCD.c
+ 
 Building file: ../src/main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../src/main.c
  
 Building target: LCD1.elf
@@ -78,16 +812,331 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    3686 bytes (11.2% Full)
+Program:    8834 bytes (27.0% Full)
 (.text + .data + .bootloader)
 
-Data:          0 bytes (0.0% Full)
+Data:          8 bytes (0.4% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
-20:49:34 **** Build of configuration Debug for project LCD1 ****
+10:40:45 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/LCD.c
+ 
+Building target: LCD1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD1.map -mmcu=atmega32 -o "LCD1.elf"  ./src/DIO.o ./src/LCD.o ./src/main.o   
+Finished building target: LCD1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD1.elf  >"LCD1.lss"
+Finished building: LCD1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD1.elf  "LCD1.hex"
+Finished building: LCD1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8896 bytes (27.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:01 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/LCD.c
+ 
+Building target: LCD1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD1.map -mmcu=atmega32 -o "LCD1.elf"  ./src/DIO.o ./src/LCD.o ./src/main.o   
+Finished building target: LCD1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD1.elf  >"LCD1.lss"
+Finished building: LCD1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD1.elf  "LCD1.hex"
+Finished building: LCD1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8834 bytes (27.0% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:47 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/DIO.d" -MT"src/DIO.o" -c -o "src/DIO.o" "../src/DIO.c"
+Finished building: ../src/DIO.c
+ 
+Building target: LCD1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD1.map -mmcu=atmega32 -o "LCD1.elf"  ./src/DIO.o ./src/LCD.o ./src/main.o   
+Finished building target: LCD1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD1.elf  >"LCD1.lss"
+Finished building: LCD1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD1.elf  "LCD1.hex"
+Finished building: LCD1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8834 bytes (27.0% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:47:42 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/LCD.c
+ 
+Building target: LCD1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD1.map -mmcu=atmega32 -o "LCD1.elf"  ./src/DIO.o ./src/LCD.o ./src/main.o   
+Finished building target: LCD1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD1.elf  >"LCD1.lss"
+Finished building: LCD1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD1.elf  "LCD1.hex"
+Finished building: LCD1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8834 bytes (27.0% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:55:44 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/LCD.c
+ 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/main.c
+ 
+Building target: LCD1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD1.map -mmcu=atmega32 -o "LCD1.elf"  ./src/DIO.o ./src/LCD.o ./src/main.o   
+Finished building target: LCD1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD1.elf  >"LCD1.lss"
+Finished building: LCD1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD1.elf  "LCD1.hex"
+Finished building: LCD1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8712 bytes (26.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:05:10 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/LCD.c
+ 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/main.c
+ 
+Building target: LCD1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD1.map -mmcu=atmega32 -o "LCD1.elf"  ./src/DIO.o ./src/LCD.o ./src/main.o   
+Finished building target: LCD1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD1.elf  >"LCD1.lss"
+Finished building: LCD1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD1.elf  "LCD1.hex"
+Finished building: LCD1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9654 bytes (29.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:05:42 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/LCD.c
+ 
+Building target: LCD1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD1.map -mmcu=atmega32 -o "LCD1.elf"  ./src/DIO.o ./src/LCD.o ./src/main.o   
+Finished building target: LCD1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD1.elf  >"LCD1.lss"
+Finished building: LCD1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD1.elf  "LCD1.hex"
+Finished building: LCD1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9654 bytes (29.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:08:03 **** Incremental Build of configuration Debug for project LCD1 ****
+make all 
+Building file: ../src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -c -o "src/LCD.o" "../src/LCD.c"
+In file included from ../src/LCD.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/LCD.c
+ 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:
+e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/main.c
+ 
+Building target: LCD1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD1.map -mmcu=atmega32 -o "LCD1.elf"  ./src/DIO.o ./src/LCD.o ./src/main.o   
+Finished building target: LCD1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD1.elf  >"LCD1.lss"
+Finished building: LCD1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD1.elf  "LCD1.hex"
+Finished building: LCD1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8996 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:08:33 **** Incremental Build of configuration Debug for project LCD1 ****
 make all 
 Building file: ../src/main.c
 Invoking: AVR Compiler
@@ -115,10 +1164,10 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    3686 bytes (11.2% Full)
+Program:    9678 bytes (29.5% Full)
 (.text + .data + .bootloader)
 
-Data:          0 bytes (0.0% Full)
+Data:          8 bytes (0.4% Full)
 (.data + .bss + .noinit)
 
 

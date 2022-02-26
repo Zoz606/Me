@@ -1,4 +1,4 @@
-20:49:34 **** Build of configuration Debug for project LCD1 ****
+11:08:33 **** Incremental Build of configuration Debug for project LCD1 ****
 make all 
 Building file: ../src/main.c
 Invoking: AVR Compiler
@@ -26,15 +26,15 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    3686 bytes (11.2% Full)
+Program:    9678 bytes (29.5% Full)
 (.text + .data + .bootloader)
 
-Data:          0 bytes (0.0% Full)
+Data:          8 bytes (0.4% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-20:49:35 Build Finished (took 1s.622ms)
+11:08:34 Build Finished (took 958ms)
 

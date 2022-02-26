@@ -1,9 +1,9 @@
 #include "DIO.h"
 
-void BUTTON_vInit (unsigned char port, unsigned char pin) {
+void BUTTON_vInit (UINT8 port, UINT8 pin) {
 	DIO_vSetPinDir(port, pin, 0);
 }
 
-unsigned char BUTTON_u8Read(unsigned char port, unsigned char pin) {
+UINT8 BUTTON_u8Read(UINT8 port, UINT8 pin) {
 	return DIO_u8ReadPin(port, pin);
 }

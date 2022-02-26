@@ -1,7 +1,7 @@
 #include <avr/io.h>
 #include "std_macros.h"
 
-void EEPROM_vWrite(unsigned short address, unsigned char data) {
+void EEPROM_vWrite(UINT16 address, UINT8 data) {
 	EEAR = address;
 	EEDR = data;
 	SET_BIT(EECR, EEMWE);
@@ -9,7 +9,7 @@ void EEPROM_vWrite(unsigned short address, unsigned char data) {
 	while (READ_BIT(EECR, EEWE) == 1);
 }
 
-unsigned char EEPROM_u8Read(unsigned short address) {
+UINT8 EEPROM_u8Read(UINT16 address) {
 	EEAR = address;
 	SET_BIT(EECR, EERE);
 	return EEDR;

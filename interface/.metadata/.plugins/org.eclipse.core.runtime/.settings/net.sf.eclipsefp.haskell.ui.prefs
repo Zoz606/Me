@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-overriddenByCSS=,conColor,sourceHoverBackgroundColor,symbolColor,keywordColor,literateCommentColor,varSymColor,varColor,functionColor,docColor,charColor,commentColor,pragmaColor,stringColor,
+overriddenByCSS=,symbolColor,varSymColor,conColor,thColor,sourceHoverBackgroundColor,keywordColor,literateCommentColor,varColor,functionColor,cppColor,docColor,charColor,commentColor,pragmaColor,stringColor,

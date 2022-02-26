@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-overriddenByCSS=,cdataBorder,cdataText,commentBorder,commentText,declBoder,declBorder,doctypeExternalId,doctypeExternalPubref,doctypeExtrenalSysref,doctypeName,entityReference,piBorder,piContent,tagAttributeEquals,tagAttributeName,tagAttributeValue,tagBorder,xmlContent,
+overriddenByCSS=,tagAttributeName,tagBorder,tagName,cdataBorder,cdataText,commentBorder,commentText,declBoder,declBorder,doctypeExternalId,doctypeExternalPubref,doctypeExtrenalSysref,doctypeName,entityReference,piBorder,piContent,tagAttributeEquals,tagAttributeValue,xmlContent,

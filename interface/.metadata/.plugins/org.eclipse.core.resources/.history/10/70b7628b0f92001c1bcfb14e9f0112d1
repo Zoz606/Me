@@ -1,0 +1,18 @@
+#define F_CPU 8000000UL
+#include "DIO.h"
+#include "LCD.h"
+#include "typedef_keywords.h"
+#include <stdio.h>
+#include <util/delay.h>
+
+
+int main() {
+	DIO_vSetPinDir('b', 1, 1);
+	DIO_vSetPinDir('b', 2, 1);
+	DIO_vWritePin('b', 1, 0);
+	DIO_vWritePin('b', 2, 0);
+	while(1) {
+
+
+	}
+}

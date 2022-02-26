@@ -1,0 +1,21 @@
+#include "typedef_keywords.h"
+#ifndef LCD_H_
+#define LCD_H_
+
+#define CLR_SCREEN 0x01 //clear screen command
+#define CURSOR_ON_DISPLAY_ON 0x0e //cursor and display on command
+#define RETURN_HOME 0x02 //Return home command
+#define ENTRY_MODE 0x06 //entry mode command
+#define EIGHT_BIT_MODE 0x38 //
+#define FOUR_BIT_MODE 0x28
+#define EN 0 //enable
+#define RS 1 //register select
+#define RW 2 //Read & write
+
+//Initialize the LCD
+void enable(UINT8 port);
+//Send a character to the data DDRAM
+void LCD_vSendChar(UINT8 enablePort, UINT8 dataPort ,UINT8 data);
+//Send a command to the command register
+void LCD_vSendCmd (UINT8 enablePort, UINT8 cmdPort, UINT8 cmd);
+#endif /* LCD_H_ */

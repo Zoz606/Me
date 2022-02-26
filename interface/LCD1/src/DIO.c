@@ -1,5 +1,7 @@
 #include <avr/io.h>
 #include "std_macros.h"
+
+
 //pin level
 void DIO_vSetPinDir (unsigned char port, unsigned char pin, unsigned char dir) {
 	switch (port) {
@@ -105,7 +107,7 @@ void DIO_vTogglePin (unsigned char port, unsigned char pin) {
 	}
 }
 
-unsigned char DIO_u8ReadPin (unsigned char port, unsigned char pin) {
+unsigned char DIO_U8ReadPin (unsigned char port, unsigned char pin) {
 	unsigned char value;
 	switch (port) {
 	case 'A':
@@ -192,6 +194,8 @@ void DIO_vSetPortDir(unsigned char port, unsigned char dir) {
 	case 'D':
 	case 'd':
 		DDRD = dir;
+		break;
+	default:
 		break;
 	}
 }

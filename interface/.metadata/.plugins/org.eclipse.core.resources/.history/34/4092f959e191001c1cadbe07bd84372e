@@ -1,0 +1,10 @@
+#include "DIO.h"
+#include "LCD.h"
+#include "typedef_keywords.h"
+#include <util/delay.h>
+
+int main() {
+	while(1) {
+
+	}
+}

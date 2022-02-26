@@ -1,0 +1,72 @@
+#include "DIO.h"
+#include "LCD.h"
+#include <util/delay.h>
+#include "LCD_congif.h"
+
+#define START 4
+#define END 7
+//initialize
+void LCD_vInit(unsigned char enablePort, unsigned char dataPort) {
+
+	_delay_ms(200);
+#if defined eight
+	/*for (int i = 0; i <= 7; i++){
+		DIO_vSetPinDir(dataPort, i, 1);
+	}*/
+	DIO_vSetPortDir(dataPort, 0xff);
+	DIO_vSetPinDir(enablePort, EN, 1);
+	DIO_vSetPinDir(enablePort, RS, 1);
+	DIO_vSetPinDir(enablePort, RW, 1);
+	LCD_vSendCmd(enablePort, dataPort, EIGHT_BIT);
+	_delay_ms(1);
+	LCD_vSendCmd(enablePort, dataPort, CURSOR_ON_DISPLAY_ON);
+	_delay_ms(1);
+	LCD_vSendCmd(enablePort, dataPort, CLR_SCREEN);
+	_delay_ms(10);
+	LCD_vSendCmd(enablePort, dataPort, ENTRY_MODE);
+	_delay_ms(1);
+
+#elif defined four
+	for (unsigned char i = START; i <= END; i++) {
+		dio_vSitPinDir(dataPort, i, 1)
+	}
+	DIO_vSetPinDir(enablePort, EN, 1);
+	DIO_vSetPinDir(enablePort, RS, 1);
+	DIO_vSetPinDir(enablePort, RW, 0);
+	LCD_vSendCmd(enablePort, dataPort, RETURN_HOME);
+	_delay_ms(10);
+	LCD_vSendCmd(enablePort, dataPort, FOUR_BIT);
+	_delay_ms(1);
+	LCD_vSendCmd(enablePort, dataPort, CURSOR_ON_DISPLAY_ON);
+	_delay_ms(1);
+	LCD_vSendCmd(enablePort, dataPort, CLR_SCREEN);
+	_delay_ms(10);
+	LCD_vSendCmd(enablePort, dataPort, ENTRY_MODE);
+	_delay_ms(1);
+#endif
+}
+
+
+//Enable
+void enable(unsigned char port) {
+	DIO_vWritePin(port, EN, 1);
+	_delay_ms(2);
+	DIO_vWritePin(port, EN, 0);
+	_delay_ms(2);
+}
+
+//Send a character to the data DDRAM
+void LCD_vSendChar(unsigned char enablePort, unsigned char dataPort ,unsigned char data) {
+	DIO_vWritePort(dataPort, data);
+	DIO_vWritePin(enablePort, RS, 1);
+	enable(enablePort);
+}
+
+//Send a command to the command register
+void LCD_vSendCmd (unsigned char enablePort, unsigned char cmdPort, unsigned char cmd) {
+	DIO_vWritePort(cmdPort, cmd);
+	DIO_vWritePin(enablePort, RS, 0);
+	enable(enablePort);
+	_delay_ms(10);
+}
+

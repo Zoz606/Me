@@ -1,0 +1,12 @@
+#include "DIO.h"
+#include "LCD.h"
+#include <util/delay.h>
+
+
+int main() {
+	LCD_vInit();
+	while(1) {
+		LCD_vSendChar('A');
+		_delay_ms(1000);
+	}
+}
