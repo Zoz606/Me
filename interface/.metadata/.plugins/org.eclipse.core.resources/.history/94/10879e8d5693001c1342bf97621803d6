@@ -1,9 +1,0 @@
-#include "typedef_keywords.h"
-#ifndef LCD_H_
-#define LCD_H_
-
-#define EN 0
-#define Rs 1
-
-
-#endif /* LCD_H_ */

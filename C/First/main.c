@@ -4,5 +4,6 @@
 
 int main()
 {
+	printf("%i", *(int *)268732);
 	return 0;
 }
