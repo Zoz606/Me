@@ -178,23 +178,38 @@ void DIO_vSetPortDir(unsigned char port, unsigned char dir) {
 	switch (port) {
 	case 'A':
 	case 'a':
-		DDRA = dir;
+		if (dir == 1) {
+			DDRA = 0xff;
+		} else {
+			DDRA = 0x00;
+		}
+
 		break;
 
 	case 'B':
 	case 'b':
-		DDRB = dir;
-		break;
+		if (dir == 1) {
+			DDRB = 0xff;
+		} else {
+			DDRB = 0x00;
+		}		break;
 
 	case 'C':
 	case 'c':
-		DDRC = dir;
+		if (dir == 1) {
+			DDRC = 0xff;
+		} else {
+			DDRC = 0x00;
+		}
 		break;
 
 	case 'D':
 	case 'd':
-		DDRD = dir;
-		break;
+		if (dir == 1) {
+			DDRD = 0xff;
+		} else {
+			DDRD = 0x00;
+		}		break;
 	}
 }
 

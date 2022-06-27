@@ -1,12 +1,11 @@
 #include <util/delay.h>
-#include <avr/io.h>
-#include "std_macros.h"
+#include "DIO.h"
+
 
 int main(void) {
-	SET_BIT(DDRA, 0);
+	DIO_vSetPortDir('A', 1);
 	while(1) {
-		TOG_BIT(PORTA, 0);
-		_delay_ms(2000);
+		DIO_vWriteLowNibble('A', 1);
 		}
 
 }
