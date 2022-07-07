@@ -107,7 +107,7 @@ void DIO_vTogglePin (unsigned char port, unsigned char pin) {
 	}
 }
 
-unsigned char DIO_U8ReadPin (unsigned char port, unsigned char pin) {
+unsigned char DIO_u8ReadPin (unsigned char port, unsigned char pin) {
 	unsigned char value;
 	switch (port) {
 	case 'A':
@@ -183,7 +183,6 @@ void DIO_vSetPortDir(unsigned char port, unsigned char dir) {
 		} else {
 			DDRA = 0x00;
 		}
-
 		break;
 
 	case 'B':
@@ -192,7 +191,8 @@ void DIO_vSetPortDir(unsigned char port, unsigned char dir) {
 			DDRB = 0xff;
 		} else {
 			DDRB = 0x00;
-		}		break;
+		}
+		break;
 
 	case 'C':
 	case 'c':
@@ -209,7 +209,8 @@ void DIO_vSetPortDir(unsigned char port, unsigned char dir) {
 			DDRD = 0xff;
 		} else {
 			DDRD = 0x00;
-		}		break;
+		}
+		break;
 	}
 }
 

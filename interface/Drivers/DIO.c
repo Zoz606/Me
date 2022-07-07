@@ -1,9 +1,9 @@
 #include <avr/io.h>
 #include "std_macros.h"
-#include "typedef keywords.h"
+
 
 //pin level
-void DIO_vSetPinDir (UINT8 port, UINT8 pin, UINT8 dir) {
+void DIO_vSetPinDir (unsigned char port, unsigned char pin, unsigned char dir) {
 	switch (port) {
 	case 'A':
 	case 'a':
@@ -43,7 +43,7 @@ void DIO_vSetPinDir (UINT8 port, UINT8 pin, UINT8 dir) {
 	}
 }
 
-void DIO_vWritePin (UINT8 port, UINT8 pin, UINT8 value) {
+void DIO_vWritePin (unsigned char port, unsigned char pin, unsigned char value) {
 	switch (port) {
 	case 'A':
 	case 'a':
@@ -83,7 +83,7 @@ void DIO_vWritePin (UINT8 port, UINT8 pin, UINT8 value) {
 	}
 }
 
-void DIO_vTogglePin (UINT8 port, UINT8 pin) {
+void DIO_vTogglePin (unsigned char port, unsigned char pin) {
 	switch (port) {
 	case 'A':
 	case 'a':
@@ -107,7 +107,7 @@ void DIO_vTogglePin (UINT8 port, UINT8 pin) {
 	}
 }
 
-UINT8 DIO_U8ReadPin (UINT8 port, UINT8 pin) {
+unsigned char DIO_U8ReadPin (unsigned char port, unsigned char pin) {
 	unsigned char value;
 	switch (port) {
 	case 'A':
@@ -133,7 +133,7 @@ UINT8 DIO_U8ReadPin (UINT8 port, UINT8 pin) {
 	return value;
 }
 
-void DIO_vEnablePullUp(UINT8 port, UINT8 pin, UINT8 enable) {
+void DIO_vEnablePullUp(unsigned char port, unsigned char pin, unsigned char enable) {
 	switch (port) {
 	case 'A':
 	case 'a':
@@ -174,31 +174,46 @@ void DIO_vEnablePullUp(UINT8 port, UINT8 pin, UINT8 enable) {
 }
 
 //port level
-void DIO_vSetPortDir(UINT8 port, UINT8 dir) {
+void DIO_vSetPortDir(unsigned char port, unsigned char dir) {
 	switch (port) {
 	case 'A':
 	case 'a':
-		DDRA = dir;
+		if (dir == 1) {
+			DDRA = 0xff;
+		} else {
+			DDRA = 0x00;
+		}
+
 		break;
 
 	case 'B':
 	case 'b':
-		DDRB = dir;
-		break;
+		if (dir == 1) {
+			DDRB = 0xff;
+		} else {
+			DDRB = 0x00;
+		}		break;
 
 	case 'C':
 	case 'c':
-		DDRC = dir;
+		if (dir == 1) {
+			DDRC = 0xff;
+		} else {
+			DDRC = 0x00;
+		}
 		break;
 
 	case 'D':
 	case 'd':
-		DDRD = dir;
-		break;
+		if (dir == 1) {
+			DDRD = 0xff;
+		} else {
+			DDRD = 0x00;
+		}		break;
 	}
 }
 
-void DIO_vWritePort (UINT8 port, UINT8 value) {
+void DIO_vWritePort (unsigned char port, unsigned char value) {
 	switch (port) {
 	case 'A':
 	case 'a':
@@ -222,7 +237,7 @@ void DIO_vWritePort (UINT8 port, UINT8 value) {
 	}
 }
 
-void DIO_vTogglePort(UINT8 port) {
+void DIO_vTogglePort(unsigned char port) {
 	switch (port) {
 	case 'A':
 	case 'a':
@@ -246,7 +261,7 @@ void DIO_vTogglePort(UINT8 port) {
 	}
 }
 
-UINT8 DIO_u8ReadPort(UINT8 port) {
+unsigned char DIO_u8ReadPort(unsigned char port) {
 	unsigned char value;
 	switch (port) {
 	case 'A':
@@ -272,7 +287,7 @@ UINT8 DIO_u8ReadPort(UINT8 port) {
 	return value;
 }
 
-void DIO_vWriteLowNibble(UINT8 port, UINT8 value) {
+void DIO_vWriteLowNibble(unsigned char port, unsigned char value) {
 
 	value &= 0x0f;
 	switch(port)
@@ -303,7 +318,7 @@ void DIO_vWriteLowNibble(UINT8 port, UINT8 value) {
 	}
 }
 
-void DIO_vWriteHighNibble(UINT8 port, UINT8 value) {
+void DIO_vWriteHighNibble(unsigned char port, unsigned char value) {
 
 	value <<= 4;
 	switch(port)
