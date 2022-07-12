@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
 int main()
 {
-	printf("%i", *(int *)268732);
+	printf("%x\n", -1 >> 1);
 	return 0;
-}
+}s
