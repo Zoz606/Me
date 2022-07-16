@@ -2,6 +2,6 @@
 
 int main()
 {
-	printf("%x\n", -1 >> 1);
+	printf("%x\n", 1);
 	return 0;
-}s
+}

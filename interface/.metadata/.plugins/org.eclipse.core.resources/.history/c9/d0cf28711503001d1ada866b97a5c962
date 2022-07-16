@@ -1,0 +1,19 @@
+#include "DIO.h"
+#include "BUTTON.h"
+#include "LED.h"
+#include <util/delay.h>
+
+int main(void) {
+	DIO_vEnablePullUp('A', 0, 1);
+	while (1) {
+		if (BUTTON_u8Read('A', 0) == 1) {
+			_delay_ms(20);
+			if (BUTTON_u8Read('A', 0) == 1){
+				LED_vToggle('D', 0);
+			}
+
+
+		}
+		_delay_ms(500);
+	}
+}

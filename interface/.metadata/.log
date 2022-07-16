@@ -3001,3 +3001,1246 @@ java.lang.IllegalStateException: BundleContext is no longer valid
 	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater.updatesAvailable(AutomaticUpdater.java:92)
 	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater$6.run(AutomaticUpdater.java:351)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2022-07-14 01:37:56.873 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2022-07-14 01:38:30.709
+!MESSAGE Removing part descriptor with the 'com.genuitec.eclipse.codetogether.ui.client.view.TypeHierarchy' id and the 'Type Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2022-07-14 01:38:30.751
+!MESSAGE Removing part descriptor with the 'com.genuitec.eclipse.codetogether.ui.client.view.CallHierarchy' id and the 'Call Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2022-07-14 01:38:32.545
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:224)
+	at com.google.gson.Gson.fromJson(Gson.java:888)
+	at com.google.gson.Gson.fromJson(Gson.java:853)
+	at com.google.gson.Gson.fromJson(Gson.java:802)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:213)
+	... 9 more
+!SESSION 2022-07-14 03:02:14.796 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.osgi 2 0 2022-07-14 03:02:38.796
+!MESSAGE While loading class "org.eclipse.core.internal.utils.StringPool", thread "Thread[Worker-2,5,main]" timed out waiting (5021ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.core.resources_3.11.1.v20161107-2032 [105]". To avoid deadlock, thread "Thread[Worker-2,5,main]" is proceeding but "org.eclipse.core.internal.utils.StringPool" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="3.11.1.v20161107-2032"; osgi.identity="org.eclipse.core.resources"; singleton:="true" [id=105] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.core.internal.utils.StringPoolJob.shareStrings(StringPoolJob.java:118)
+	at org.eclipse.core.internal.utils.StringPoolJob.run(StringPoolJob.java:100)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	... 14 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.core.internal.utils.StringPoolJob.shareStrings(StringPoolJob.java:118)
+	at org.eclipse.core.internal.utils.StringPoolJob.run(StringPoolJob.java:100)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2022-07-14 03:03:04.424
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:224)
+	at com.google.gson.Gson.fromJson(Gson.java:888)
+	at com.google.gson.Gson.fromJson(Gson.java:853)
+	at com.google.gson.Gson.fromJson(Gson.java:802)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:213)
+	... 9 more
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2022-07-14 03:03:06.479
+!MESSAGE Removing part descriptor with the 'com.genuitec.eclipse.codetogether.ui.client.view.TypeHierarchy' id and the 'Type Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2022-07-14 03:03:06.484
+!MESSAGE Removing part descriptor with the 'com.genuitec.eclipse.codetogether.ui.client.view.CallHierarchy' id and the 'Call Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:18:11.464
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2022-07-14 03:18:13.391
+!MESSAGE Unable to read repository at http://gnuarmeclipse.sourceforge.net/updates/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLSocketFactory.createLayeredSocket(SSLSocketFactory.java:573)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:557)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:414)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 17 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1200 2022-07-14 03:18:23.302
+!MESSAGE Artifact not found: jar:file:/C:/Users/Ahmed/Desktop/Desktop%20Q1/SDK_IMT/IMT_SDK_Win_32/Other/Arm_Plugin.zip!/content.xml.xz.
+!STACK 0
+java.io.FileNotFoundException: jar:file:/C:/Users/Ahmed/Desktop/Desktop%20Q1/SDK_IMT/IMT_SDK_Win_32/Other/Arm_Plugin.zip!/content.xml.xz
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:480)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:437)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:360)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:192)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:255)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:402)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:132)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:56)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:78)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:396)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:199)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2022-07-14 03:18:29.862
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Artifact not found: http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview_feature_0.2.6.jar.
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:282)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeaturesFromSite(UpdateSite.java:578)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeatures(UpdateSite.java:474)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteFeaturesAction.perform(RemoteFeaturesAction.java:39)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteUpdateSiteAction.perform(RemoteUpdateSiteAction.java:50)
+	at org.eclipse.equinox.p2.publisher.Publisher$ArtifactProcess.run(Publisher.java:207)
+	at org.eclipse.equinox.p2.publisher.Publisher.publish(Publisher.java:237)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.generateMetadata(UpdateSiteMetadataRepositoryFactory.java:120)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:105)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:396)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:199)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+Caused by: java.io.FileNotFoundException: http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview_feature_0.2.6.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:480)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:437)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:360)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:192)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:255)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:267)
+	... 23 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2022-07-14 03:18:29.862
+!MESSAGE Artifact not found: http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview_feature_0.2.6.jar.
+!STACK 0
+java.io.FileNotFoundException: http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview_feature_0.2.6.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:480)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:437)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:360)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:192)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:255)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:267)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeaturesFromSite(UpdateSite.java:578)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeatures(UpdateSite.java:474)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteFeaturesAction.perform(RemoteFeaturesAction.java:39)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteUpdateSiteAction.perform(RemoteUpdateSiteAction.java:50)
+	at org.eclipse.equinox.p2.publisher.Publisher$ArtifactProcess.run(Publisher.java:207)
+	at org.eclipse.equinox.p2.publisher.Publisher.publish(Publisher.java:237)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.generateMetadata(UpdateSiteMetadataRepositoryFactory.java:120)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:105)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:396)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:199)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+
+!ENTRY org.eclipse.equinox.p2.updatesite 4 0 2022-07-14 03:18:29.867
+!MESSAGE Error reading feature http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview_feature_0.2.6.jar.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2022-07-14 03:18:32.294
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Artifact not found: http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview.data_feature_0.2.6.r191.jar.
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:282)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeaturesFromSite(UpdateSite.java:578)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeatures(UpdateSite.java:474)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteFeaturesAction.perform(RemoteFeaturesAction.java:39)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteUpdateSiteAction.perform(RemoteUpdateSiteAction.java:50)
+	at org.eclipse.equinox.p2.publisher.Publisher$ArtifactProcess.run(Publisher.java:207)
+	at org.eclipse.equinox.p2.publisher.Publisher.publish(Publisher.java:237)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.generateMetadata(UpdateSiteMetadataRepositoryFactory.java:120)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:105)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:396)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:199)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+Caused by: java.io.FileNotFoundException: http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview.data_feature_0.2.6.r191.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:480)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:437)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:360)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:192)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:255)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:267)
+	... 23 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2022-07-14 03:18:32.294
+!MESSAGE Artifact not found: http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview.data_feature_0.2.6.r191.jar.
+!STACK 0
+java.io.FileNotFoundException: http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview.data_feature_0.2.6.r191.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:480)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:437)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:360)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:192)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.download(CachingTransport.java:255)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:267)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeaturesFromSite(UpdateSite.java:578)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeatures(UpdateSite.java:474)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteFeaturesAction.perform(RemoteFeaturesAction.java:39)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteUpdateSiteAction.perform(RemoteUpdateSiteAction.java:50)
+	at org.eclipse.equinox.p2.publisher.Publisher$ArtifactProcess.run(Publisher.java:207)
+	at org.eclipse.equinox.p2.publisher.Publisher.publish(Publisher.java:237)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.generateMetadata(UpdateSiteMetadataRepositoryFactory.java:120)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:105)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:396)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:199)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+
+!ENTRY org.eclipse.equinox.p2.updatesite 4 0 2022-07-14 03:18:32.294
+!MESSAGE Error reading feature http://embsysregview.sourceforge.net/update/org.eclipse.cdt.embsysregview.data_feature_0.2.6.r191.jar.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2022-07-14 03:18:32.394
+!MESSAGE No repository found at jar:file:/C:/Users/Ahmed/Desktop/SDK_IMT/SecondTrial/SDK_Win_64/Other/AVR_Plug.zip!/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2022-07-14 03:18:35.829
+!MESSAGE No repository found at https://mcuoneclipse.com/2014/05/29/how-to-add-register-details-view-in-eclipse/.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:18:41.249
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:18:46.711
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:36:49.058
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:38:46.973
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:06.760
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:13.377
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:18.909
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:23.975
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:29.081
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:34.231
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:39.821
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:45.330
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:51.168
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:39:58.680
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:40:04.322
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:40:09.442
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:40:14.576
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:40:19.965
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:40:25.548
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:40:31.159
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:40:36.788
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:40:42.316
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 03:40:47.783
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-07-14 03:40:52.298
+!MESSAGE An internal error occurred during: "Update validate job".
+!STACK 0
+java.lang.IllegalStateException: BundleContext is no longer valid
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.checkValid(BundleContextImpl.java:984)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getServiceReference(BundleContextImpl.java:559)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getServiceReference(BundleContextImpl.java:1011)
+	at org.eclipse.equinox.internal.p2.core.helpers.ServiceHelper.getService(ServiceHelper.java:27)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getSharedPreferences(AbstractRepositoryManager.java:512)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreRepositories(AbstractRepositoryManager.java:1016)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getRepositoryProperty(AbstractRepositoryManager.java:564)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:229)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.updatesFor(SimplePlanner.java:784)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.updatesFor(UpdateOperation.java:142)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.computeProfileChangeRequest(UpdateOperation.java:179)
+	at org.eclipse.equinox.p2.operations.UpdateOperation$1.run(UpdateOperation.java:323)
+	at org.eclipse.equinox.internal.p2.operations.SearchForUpdatesResolutionJob.runModal(SearchForUpdatesResolutionJob.java:37)
+	at org.eclipse.equinox.p2.operations.ProfileChangeOperation.resolveModal(ProfileChangeOperation.java:115)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater.updatesAvailable(AutomaticUpdater.java:111)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater.updatesAvailable(AutomaticUpdater.java:92)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater$6.run(AutomaticUpdater.java:351)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2022-07-14 04:17:29.169 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2022-07-14 04:18:16.569
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at com.google.gson.Gson.fromJson(Gson.java:846)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:384)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:215)
+	... 9 more
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2022-07-14 04:18:18.030
+!MESSAGE Removing part descriptor with the 'com.genuitec.eclipse.codetogether.ui.client.view.TypeHierarchy' id and the 'Type Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2022-07-14 04:18:18.036
+!MESSAGE Removing part descriptor with the 'com.genuitec.eclipse.codetogether.ui.client.view.CallHierarchy' id and the 'Call Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-14 04:45:29.067
+!MESSAGE Connection to http://gnuarmeclipse.sourceforge.net/updates/p2.index failed on Remote host closed connection during handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:160)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:168)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:273)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:279)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:205)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:241)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2022-07-14 04:45:31.108
+!MESSAGE Unable to read repository at http://gnuarmeclipse.sourceforge.net/updates/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLSocketFactory.createLayeredSocket(SSLSocketFactory.java:573)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:557)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:414)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 17 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1200 2022-07-14 04:45:38.784
+!MESSAGE Artifact not found: jar:file:/C:/Users/Ahmed/Desktop/Desktop%20Q1/SDK_IMT/IMT_SDK_Win_32/Other/Arm_Plugin.zip!/content.xml.xz.
+!STACK 0
+java.io.FileNotFoundException: jar:file:/C:/Users/Ahmed/Desktop/Desktop%20Q1/SDK_IMT/IMT_SDK_Win_32/Other/Arm_Plugin.zip!/content.xml.xz
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:480)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:437)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:360)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:402)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:132)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:56)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:78)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:396)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:199)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2022-07-14 04:45:42.029
+!MESSAGE No repository found at jar:file:/C:/Users/Ahmed/Desktop/SDK_IMT/SecondTrial/SDK_Win_64/Other/AVR_Plug.zip!/.
+
+!ENTRY org.eclipse.equinox.p2.updatechecker 4 0 2022-07-14 04:45:44.834
+!MESSAGE Exception in update check thread
+!STACK 0
+org.eclipse.oomph.util.ReflectUtil$ReflectionException: java.lang.NullPointerException
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:132)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:396)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:199)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.findMatchingRepositoryExtensions(AbstractRepositoryManager.java:404)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:763)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	... 8 more
+!SESSION 2022-07-15 23:13:32.328 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY com.genuitec.eclipse.theming.core 4 0 2022-07-15 23:13:36.523
+!MESSAGE <null>
+!STACK 0
+Unexpected token RIGHT SQUARE(]) at position 0.
+	at org.json.simple.parser.JSONParser.parse(JSONParser.java:257)
+	at org.json.simple.parser.JSONParser.parse(JSONParser.java:92)
+	at com.genuitec.eclipse.theming.core.services.ImageReplacementService.loadUnknownImages(ImageReplacementService.java:91)
+	at com.genuitec.eclipse.theming.core.services.ImageReplacementService.<init>(ImageReplacementService.java:74)
+	at com.genuitec.eclipse.theming.core.services.ImageReplacementService.<clinit>(ImageReplacementService.java:38)
+	at com.genuitec.eclipse.theming.core.internal.images.URLImageDescriptorWeaver.weave(URLImageDescriptorWeaver.java:23)
+	at com.genuitec.eclipse.theming.core.AbstractWeaverExtension.weave(AbstractWeaverExtension.java:51)
+	at com.genuitec.eclipse.patches.internal.InstrumentationManager$WeavingExtension.weave(InstrumentationManager.java:429)
+	at com.genuitec.eclipse.patches.internal.InstrumentationManager.weave(InstrumentationManager.java:332)
+	at com.genuitec.eclipse.patches.internal.InstrumentationWeaver.weave(InstrumentationWeaver.java:15)
+	at org.eclipse.osgi.internal.weaving.WovenClassImpl.call(WovenClassImpl.java:160)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.notifyHookPrivileged(ServiceRegistry.java:1280)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.notifyHooksPrivileged(ServiceRegistry.java:1263)
+	at org.eclipse.osgi.internal.weaving.WovenClassImpl.callHooks(WovenClassImpl.java:242)
+	at org.eclipse.osgi.internal.weaving.WeavingHookConfigurator.processClass(WeavingHookConfigurator.java:56)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.defineClass(ClasspathManager.java:616)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:586)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:538)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:525)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.BrandingProperties.getImages(BrandingProperties.java:123)
+	at org.eclipse.ui.internal.ProductProperties.getWindowImages(ProductProperties.java:319)
+	at org.eclipse.ui.internal.ProductInfo.getWindowImages(ProductInfo.java:96)
+	at org.eclipse.ui.internal.WorkbenchPlugin.getWindowImages(WorkbenchPlugin.java:1065)
+	at org.eclipse.ui.internal.Workbench.initializeImages(Workbench.java:1891)
+	at org.eclipse.ui.internal.Workbench.createDisplay(Workbench.java:806)
+	at org.eclipse.ui.PlatformUI.createDisplay(PlatformUI.java:160)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.createDisplay(IDEApplication.java:168)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:111)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2022-07-15 23:14:07.315
+!MESSAGE Removing part descriptor with the 'com.genuitec.eclipse.codetogether.ui.client.view.TypeHierarchy' id and the 'Type Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2022-07-15 23:14:07.329
+!MESSAGE Removing part descriptor with the 'com.genuitec.eclipse.codetogether.ui.client.view.CallHierarchy' id and the 'Call Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2022-07-15 23:14:07.824
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at com.google.gson.Gson.fromJson(Gson.java:846)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:384)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:215)
+	... 9 more
