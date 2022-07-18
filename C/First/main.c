@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-int main()
+void main(void)
 {
-	printf("%x\n", 1);
-	return 0;
 }
