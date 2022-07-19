@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 void max(int x, int y)
 {
     int z;
