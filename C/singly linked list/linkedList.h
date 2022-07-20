@@ -15,6 +15,6 @@ typedef struct linkedList *node;
 
 void countOfNodes(node head);
 void printData(node head);
-// node createNode();
-// node addNode(node head, UINT32 value);
+node createNode();
+node addNode(node head, UINT32 value);
 #endif
