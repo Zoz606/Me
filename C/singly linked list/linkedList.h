@@ -13,8 +13,11 @@ struct linkedList
 
 typedef struct linkedList *node;
 
+// The functions
+node createNode(UINT32 value);
+void addNodeEnd(node head, UINT32 value);
+void addNodeTop(node *head, UINT32 data);
 void countOfNodes(node head);
 void printData(node head);
-node createNode();
-node addNode(node head, UINT32 value);
+
 #endif

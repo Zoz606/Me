@@ -4,20 +4,13 @@ int main()
 {
     node head;
 
-    head = (node)malloc(sizeof(node));
-    head->data = 45;
-    head->next = NULL;
+    head = createNode(45);
 
-    node newNode;
-    newNode = malloc(sizeof(node));
-    newNode->data = 98;
-    newNode->next = NULL;
-    head->next = newNode;
+    addNodeEnd(head, 98);
+    addNodeEnd(head, 3);
+    addNodeEnd(head, 8);
 
-    newNode = malloc(sizeof(node));
-    newNode->data = 3;
-    newNode->next = NULL;
-    head->next->next = newNode;
+    addNodeTop(&head, 60);
 
     // countOfNodes(head);
     printData(head);
