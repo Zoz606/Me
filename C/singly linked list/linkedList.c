@@ -34,13 +34,37 @@ void addNodeEnd(node head, UINT32 value)
 // Add a node to the beginning of the list
 void addNodeTop(node *headAddress, UINT32 data)
 {
-    node ptr, new;
-    new = createNode(data);
-    ptr = new;
-    ptr->next = *headAddress;
-    *headAddress = ptr;
+    node newNode;
+    newNode = createNode(data);
+    newNode->next = *headAddress;
+    *headAddress = newNode;
 }
 
+// add a node between two nodes
+void addNodeBefore(node *headAddres, UINT32 data, UINT32 position)
+{
+    node ptr, newNode, existingNode;
+    newNode = createNode(data);
+    ptr = *headAddres;
+
+    position--;
+    while (position != 1)
+    {
+        ptr = ptr->next;
+        position--;
+    }
+    newNode->next = ptr->next;
+    ptr->next = newNode;
+}
+
+// Delete a node from the list
+void deleteNodeTop(node *headAddress)
+{
+    node temp = *headAddress;
+    node head = *headAddress;
+    head = head->next;
+    free(temp);
+}
 // Prints the data in the List
 void printData(node head)
 {

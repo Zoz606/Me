@@ -8,10 +8,11 @@ int main()
 
     addNodeEnd(head, 98);
     addNodeEnd(head, 3);
-    addNodeEnd(head, 8);
 
-    addNodeTop(&head, 60);
-
+    deleteNodeTop(&head);
+    //addNodeBefore(&head, 60, 3);
+    //addNodeEnd(head, 8);
+    //addNodeTop(&head, 60);
     // countOfNodes(head);
     printData(head);
     return 0;
