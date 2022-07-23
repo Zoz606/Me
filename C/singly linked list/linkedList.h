@@ -15,11 +15,11 @@ typedef struct linkedList *node;
 
 // The functions
 node createNode(UINT32 value);
-void addNodeEnd(node head, UINT32 value);
-void addNodeTop(node *head, UINT32 data);
-void addNodeBefore(node *headAddres, UINT32 data, UINT32 position);
-void deleteNodeTop(node *headAddress);
 void countOfNodes(node head);
 void printData(node head);
+void addNode(node *headAddress, UINT32 data, UINT32 position);
+node deleteNode(node head, UINT32 position);
+node deletAllList(node head);
+node reverseList(node head);
 
 #endif
