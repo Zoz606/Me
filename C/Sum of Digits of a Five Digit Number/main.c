@@ -6,9 +6,16 @@
 int main()
 {
 
-    int n;
+    int n, x, sum = 0, reminder=0;
+    printf("Please entera five digits intigernumber:")
     scanf("%d", &n);
-    // Complete the code to calculate the sum of the five digits on n.
-    if ((n >= ))
+    x = n
+    while (x!= 0)
+    {
+        /reminder = x% 10;
+        sum += x;
+    }
+    printf("The sum of the five digits = %d", sum);
+
     return 0;
 }
