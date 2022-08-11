@@ -7,7 +7,7 @@ int main()
 {
 
     int n, x, sum = 0, reminder=0;
-    printf("Please entera five digits intigernumber:")
+    printf("Please entera five digits intigernumber:");
     scanf("%d", &n);
     x = n
     while (x!= 0)
