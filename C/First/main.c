@@ -1,7 +1,9 @@
 #include <stdio.h>
-#include "max.h"
+
 
 void main()
 {
-    max(3, 5);
+    unsigned char  x = 5;
+    pritf("%d", x);
+    
 }

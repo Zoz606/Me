@@ -135,7 +135,6 @@ node deleteNode(node head, UINT32 position)
 
 // Delete the all list
 node deletAllList(node head)
-
 {
     node temp = head;
     while (temp != NULL)
