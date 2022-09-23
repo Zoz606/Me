@@ -52,6 +52,52 @@ void insertAfter(UINT32 position, node *headAddress, UINT32 data)
     newPtr->next = temp2;
     newPtr->prev = temp;
 }
+void insertBefore(UINT32 position, node *headAddress, UINT32 data)
+{
+    node newPtr = NULL;
+    node temp = *headAddress;
+    node temp2;
+    newPtr = createNode(newPtr, data);
+
+    while (position > 2)
+    {
+        temp = temp->next;
+        position--;
+    }
+    if (position == 1)
+    {
+        temp = addNodeTop(temp, data);
+    }
+    else
+    {
+        temp2 = temp->next;
+        temp->next = newPtr;
+        temp2->prev = newPtr;
+        newPtr->next = temp2;
+        newPtr->prev = temp;
+    }
+}
+void reverseList()
+node delFirstNode(node head)
+{
+    
+    head = head->next;
+    free(head->prev);
+    return head;
+}
+node delLastNode(node head)
+{
+    node temp = head;
+    node temp2;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp2 = temp->prev;
+    temp2->next = NULL;
+    free(temp);
+    return head;
+}
 void printData(node head)
 {
     node ptr;
