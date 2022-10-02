@@ -19,9 +19,11 @@ node addNodeTop(node head, UINT32 data);
 void addNodeEnd(node *headAddress, UINT32 data);
 void insertAfter(UINT32 position, node *headAddress, UINT32 data);
 void insertBefore(UINT32 position, node *headAddress, UINT32 data);
+node reverseList(node head);
+
 node delFirstNode(node head);
 node delLastNode(node head);
 
-    void printData(node head);
+void printData(node head);
 
 #endif
