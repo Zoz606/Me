@@ -36,7 +36,5 @@ void SEG_vWrite(unsigned char port, unsigned char value) {
 			~0x6f  //9
 	};
 #endif
-
-
 	DIO_vWritePort('D', numbers[value]);
 }

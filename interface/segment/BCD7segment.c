@@ -1,7 +1,7 @@
 #include "DIO.h"
 
 
-void SEG_vInit(UINT8 port) {
+void SEG_vInit(unsigned char port) {
 
 	DIO_vSetPinDir(port ,0 ,1);
 	DIO_vSetPinDir(port ,1 ,1);

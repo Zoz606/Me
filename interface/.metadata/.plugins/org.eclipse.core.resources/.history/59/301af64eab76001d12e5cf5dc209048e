@@ -1,0 +1,13 @@
+
+#include <util/delay.h>
+#include "DIO.h"
+#include "typedef keywords.h"
+
+int main(void) {
+	UINT8 numbers[] = {};
+	DIO_vSetPortDir('D');
+
+	while(1) {
+
+	}
+}

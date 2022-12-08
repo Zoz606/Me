@@ -1,40 +1,10 @@
-17:45:29 **** Incremental Build of configuration Debug for project segment ****
+06:37:39 **** Incremental Build of configuration Debug for project segment ****
 make all 
-Building file: ../main.c
+Building file: ../BCD7segment.c
 Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:2:
-e:/programs/eclipse/03- imt sdk/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: segment.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,segment.map -mmcu=atmega32 -o "segment.elf"  ./DIO.o ./main.o   
-Finished building target: segment.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S segment.elf  >"segment.lss"
-Finished building: segment.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex segment.elf  "segment.hex"
-Finished building: segment.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 segment.elf
-AVR Memory Usage
-----------------
-Device: atmega32
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"BCD7segment.d" -MT"BCD7segment.o" -c -o "BCD7segment.o" "../BCD7segment.c"
+../BCD7segment.c:12: error: expected ')' before 'port'
+make: *** [BCD7segment.o] Error 1
 
-Program:    6380 bytes (19.5% Full)
-(.text + .data + .bootloader)
-
-Data:         24 bytes (1.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-17:45:31 Build Finished (took 1s.206ms)
+06:37:40 Build Finished (took 396ms)
 

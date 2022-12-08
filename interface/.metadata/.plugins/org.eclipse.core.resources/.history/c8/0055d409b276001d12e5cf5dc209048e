@@ -9,7 +9,7 @@ void SEG_vInit(unsigned char port) {
 
 void SEG_vWrite(unsigned char port, unsigned char value) {
 #if defined cc
-	unsigned char numbers[] = {
+	unsigned int numbers[] = {
 			0x3f, //0
 			0x06, //1
 			0x5b, //2
@@ -23,7 +23,7 @@ void SEG_vWrite(unsigned char port, unsigned char value) {
 	};
 		};
 #elif defined ca
-	unsigned char numbers[]= {
+	unsigned int numbers[]= {
 			~0x3f, //0
 			~0x06, //1
 			~0x5b, //2
